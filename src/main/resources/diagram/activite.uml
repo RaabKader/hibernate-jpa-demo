@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.SCHEMA:activite.activite</OriginalElement>
+  <nodes>
+    <node x="1357.409090909091" y="0.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.type_demande</node>
+    <node x="2353.0" y="4007.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.dmd_statut</node>
+    <node x="843.0" y="2598.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.cr</node>
+    <node x="544.0" y="2653.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.tache</node>
+    <node x="541.0" y="4007.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.formulaire_saisi</node>
+    <node x="2591.25" y="0.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.demande_histo</node>
+    <node x="1776.0" y="4007.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.ot_demande_intervention</node>
+    <node x="1303.25" y="2686.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.ot_intervenant</node>
+    <node x="461.75" y="1607.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.dmd_equipement</node>
+    <node x="1777.25" y="2752.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.ot_prise_en_compte_intervenant</node>
+    <node x="1032.25" y="3624.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.cr_document</node>
+    <node x="862.0" y="4007.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.wo_sigma_csc</node>
+    <node x="0.0" y="2807.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.ot_localisation</node>
+    <node x="1614.25" y="2828.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.ot_equipement</node>
+    <node x="0.0" y="4007.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.utilisation_dactech</node>
+    <node x="3178.25" y="0.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.cr_activite_interne</node>
+    <node x="625.75" y="1442.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.dmd_mgt_cause</node>
+    <node x="1233.409090909091" y="11.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.dmd_canal</node>
+    <node x="2739.0" y="4007.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.ot_to_delete</node>
+    <node x="1878.75" y="1530.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.dmd_motif</node>
+    <node x="2037.0" y="4007.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.ot_formulaire</node>
+    <node x="1028.75" y="1112.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.ot</node>
+    <node x="2959.25" y="0.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.contact</node>
+    <node x="2082.75" y="1442.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.dmd_incident_cause</node>
+    <node x="2218.0" y="4007.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.ot_uo</node>
+    <node x="2295.25" y="454.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.document</node>
+    <node x="1303.25" y="3514.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.ot_intervenant_histo</node>
+    <node x="1603.0" y="4007.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.type_contact</node>
+    <node x="2321.75" y="1607.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.dmd_document</node>
+    <node x="1152.409090909091" y="168.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.demande</node>
+    <node x="2510.0" y="4007.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.ot_formulaire_saisi</node>
+    <node x="736.25" y="3602.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.condition_releve</node>
+    <node x="2097.25" y="2828.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.ot_installation</node>
+    <node x="3566.25" y="0.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.activite_interne</node>
+    <node x="1358.0" y="4007.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.document_email</node>
+    <node x="864.75" y="1585.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.dmd_sla</node>
+    <node x="1639.75" y="1442.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.dmd_da_cause</node>
+    <node x="172.0" y="2290.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.ot_histo</node>
+    <node x="296.0" y="4007.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.notification_send</node>
+    <node x="3923.25" y="0.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.releve_temperature</node>
+    <node x="1075.0" y="4007.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.synthese</node>
+    <node x="1400.75" y="1453.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.dmd_alarme_cause</node>
+    <node x="267.75" y="1442.0">2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.dmd_contact</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.demande" target="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.dmd_canal">
+      <point x="0.0" y="-422.0" />
+      <point x="1340.409090909091" y="143.0" />
+      <point x="1311.409090909091" y="143.0" />
+      <point x="26.0" y="48.0" />
+    </edge>
+    <edge source="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.ot" target="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.demande">
+      <point x="0.0" y="-554.0" />
+      <point x="1204.75" y="1092.0" />
+      <point x="1340.409090909091" y="1092.0" />
+      <point x="0.0" y="422.0" />
+    </edge>
+    <edge source="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.dmd_contact" target="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.demande">
+      <point x="0.0" y="-224.0" />
+      <point x="354.75" y="1052.0" />
+      <point x="1203.681818181818" y="1052.0" />
+      <point x="-136.72727272727275" y="422.0" />
+    </edge>
+    <edge source="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.dmd_equipement" target="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.demande">
+      <point x="0.0" y="-59.0" />
+      <point x="533.75" y="1062.0" />
+      <point x="1237.8636363636365" y="1062.0" />
+      <point x="-102.5454545454545" y="422.0" />
+    </edge>
+    <edge source="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.dmd_motif" target="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.demande">
+      <point x="0.0" y="-136.0" />
+      <point x="1970.75" y="1072.0" />
+      <point x="1442.9545454545455" y="1072.0" />
+      <point x="102.5454545454545" y="422.0" />
+    </edge>
+    <edge source="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.dmd_mgt_cause" target="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.demande">
+      <point x="0.0" y="-224.0" />
+      <point x="735.25" y="1072.0" />
+      <point x="1272.0454545454545" y="1072.0" />
+      <point x="-68.36363636363649" y="422.0" />
+    </edge>
+    <edge source="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.ot_intervenant_histo" target="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.ot_intervenant">
+      <point x="0.0" y="-224.0" />
+      <point x="0.0" y="191.0" />
+    </edge>
+    <edge source="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.tache" target="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.ot">
+      <point x="0.0" y="-224.0" />
+      <point x="683.5" y="2260.0" />
+      <point x="1138.75" y="2260.0" />
+      <point x="-66.0" y="554.0" />
+    </edge>
+    <edge source="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.ot_equipement" target="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.ot">
+      <point x="0.0" y="-49.0" />
+      <point x="1685.75" y="2260.0" />
+      <point x="1270.75" y="2260.0" />
+      <point x="66.0" y="554.0" />
+    </edge>
+    <edge source="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.condition_releve" target="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.cr">
+      <point x="0.0" y="-136.0" />
+      <point x="874.25" y="3489.0" />
+      <point x="929.5" y="3489.0" />
+      <point x="-86.5" y="279.0" />
+    </edge>
+    <edge source="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.ot_prise_en_compte_intervenant" target="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.ot">
+      <point x="0.0" y="-125.0" />
+      <point x="1927.25" y="2250.0" />
+      <point x="1314.75" y="2250.0" />
+      <point x="110.0" y="554.0" />
+    </edge>
+    <edge source="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.dmd_alarme_cause" target="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.demande">
+      <point x="0.0" y="-213.0" />
+      <point x="1510.25" y="1092.0" />
+      <point x="1374.590909090909" y="1092.0" />
+      <point x="34.181818181818244" y="422.0" />
+    </edge>
+    <edge source="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.ot_intervenant" target="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.ot">
+      <point x="0.0" y="-191.0" />
+      <point x="1448.75" y="2270.0" />
+      <point x="1226.75" y="2270.0" />
+      <point x="22.0" y="554.0" />
+    </edge>
+    <edge source="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.dmd_document" target="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.document">
+      <point x="33.0" y="-59.0" />
+      <point x="0.0" y="136.0" />
+    </edge>
+    <edge source="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.cr_document" target="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.cr">
+      <point x="0.0" y="-114.0" />
+      <point x="1157.75" y="3489.0" />
+      <point x="1102.5" y="3489.0" />
+      <point x="86.5" y="279.0" />
+    </edge>
+    <edge source="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.demande" target="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.demande">
+      <point x="-170.9090909090909" y="422.0" />
+      <point x="1169.5" y="1032.0" />
+      <point x="1132.409090909091" y="1032.0" />
+      <point x="1132.409090909091" y="590.0" />
+      <point x="-188.0" y="-0.0" />
+    </edge>
+    <edge source="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.ot_localisation" target="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.ot">
+      <point x="0.0" y="-70.0" />
+      <point x="76.0" y="2240.0" />
+      <point x="1050.75" y="2240.0" />
+      <point x="-154.0" y="554.0" />
+    </edge>
+    <edge source="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.demande" target="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.type_demande">
+      <point x="125.33333333333326" y="-422.0" />
+      <point x="1465.742424242424" y="143.0" />
+      <point x="1421.409090909091" y="143.0" />
+      <point x="0.0" y="59.0" />
+    </edge>
+    <edge source="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.dmd_da_cause" target="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.demande">
+      <point x="0.0" y="-224.0" />
+      <point x="1749.25" y="1082.0" />
+      <point x="1408.7727272727275" y="1082.0" />
+      <point x="68.36363636363649" y="422.0" />
+    </edge>
+    <edge source="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.dmd_incident_cause" target="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.demande">
+      <point x="0.0" y="-224.0" />
+      <point x="2192.25" y="1062.0" />
+      <point x="1477.1363636363635" y="1062.0" />
+      <point x="136.72727272727275" y="422.0" />
+    </edge>
+    <edge source="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.ot_installation" target="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.ot">
+      <point x="0.0" y="-49.0" />
+      <point x="2173.25" y="2240.0" />
+      <point x="1358.75" y="2240.0" />
+      <point x="154.0" y="554.0" />
+    </edge>
+    <edge source="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.cr" target="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.ot">
+      <point x="0.0" y="-279.0" />
+      <point x="1016.0" y="2270.0" />
+      <point x="1182.75" y="2270.0" />
+      <point x="-22.0" y="554.0" />
+    </edge>
+    <edge source="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.dmd_document" target="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.demande">
+      <point x="-33.0" y="-59.0" />
+      <point x="2354.75" y="1052.0" />
+      <point x="1511.318181818182" y="1052.0" />
+      <point x="170.909090909091" y="422.0" />
+    </edge>
+    <edge source="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.dmd_sla" target="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.demande">
+      <point x="0.0" y="-81.0" />
+      <point x="936.75" y="1082.0" />
+      <point x="1306.2272727272725" y="1082.0" />
+      <point x="-34.181818181818244" y="422.0" />
+    </edge>
+    <edge source="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.ot_histo" target="2b1dc621-8ba1-4b44-b2d2-c9eb89068c0d.TABLE:activite.activite.ot">
+      <point x="0.0" y="-587.0" />
+      <point x="348.0" y="2250.0" />
+      <point x="1094.75" y="2250.0" />
+      <point x="-110.0" y="554.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8015276145710927" x="1943.8965732812012" y="-662.2041414338737" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Key columns</Category>
+    <Category>Columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+

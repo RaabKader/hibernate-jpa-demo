@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+    <persistence-unit name="ActivitePU">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>fr.dalkia.entity.ActiviteInterneEntity</class>
+        <class>fr.dalkia.entity.ConditionReleveEntity</class>
+        <class>fr.dalkia.entity.ContactEntity</class>
+        <class>fr.dalkia.entity.CrEntity</class>
+        <class>fr.dalkia.entity.CrActiviteInterneEntity</class>
+        <class>fr.dalkia.entity.CrDocumentEntity</class>
+        <class>fr.dalkia.entity.DemandeEntity</class>
+        <class>fr.dalkia.entity.DemandeHistoEntity</class>
+        <class>fr.dalkia.entity.DmdAlarmeCauseEntity</class>
+        <class>fr.dalkia.entity.DmdCanalEntity</class>
+        <class>fr.dalkia.entity.DmdContactEntity</class>
+        <class>fr.dalkia.entity.DmdDaCauseEntity</class>
+        <class>fr.dalkia.entity.DmdDocumentEntity</class>
+        <class>fr.dalkia.entity.DmdEquipementEntity</class>
+        <class>fr.dalkia.entity.DmdIncidentCauseEntity</class>
+        <class>fr.dalkia.entity.DmdMgtCauseEntity</class>
+        <class>fr.dalkia.entity.DmdMotifEntity</class>
+        <class>fr.dalkia.entity.DmdSlaEntity</class>
+        <class>fr.dalkia.entity.DmdStatutEntity</class>
+        <class>fr.dalkia.entity.DocumentEntity</class>
+        <class>fr.dalkia.entity.DocumentEmailEntity</class>
+        <class>fr.dalkia.entity.FormulaireSaisiEntity</class>
+        <class>fr.dalkia.entity.NotificationSendEntity</class>
+        <class>fr.dalkia.entity.OtEntity</class>
+        <class>fr.dalkia.entity.OtDemandeInterventionEntity</class>
+        <class>fr.dalkia.entity.OtEquipementEntity</class>
+        <class>fr.dalkia.entity.OtFormulaireEntity</class>
+        <class>fr.dalkia.entity.OtFormulaireSaisiEntity</class>
+        <class>fr.dalkia.entity.OtHistoEntity</class>
+        <class>fr.dalkia.entity.OtInstallationEntity</class>
+        <class>fr.dalkia.entity.OtIntervenantEntity</class>
+        <class>fr.dalkia.entity.OtIntervenantHistoEntity</class>
+        <class>fr.dalkia.entity.OtLocalisationEntity</class>
+        <class>fr.dalkia.entity.OtPriseEnCompteIntervenantEntity</class>
+        <class>fr.dalkia.entity.OtUoEntity</class>
+        <class>fr.dalkia.entity.ReleveTemperatureEntity</class>
+        <class>fr.dalkia.entity.SyntheseEntity</class>
+        <class>fr.dalkia.entity.TacheEntity</class>
+        <class>fr.dalkia.entity.TypeContactEntity</class>
+        <class>fr.dalkia.entity.TypeDemandeEntity</class>
+        <class>fr.dalkia.entity.UtilisationDactechEntity</class>
+        <class>fr.dalkia.entity.WoSigmaCscEntity</class>
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5432/postgres"/>
+            <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
+            <property name="hibernate.connection.username" value="postgres"/>
+            <property name="hibernate.connection.password" value="D@lkia"/>
+            <property name="hibernate.archive.autodetection" value="class"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+        </properties>
+    </persistence-unit>
+</persistence>

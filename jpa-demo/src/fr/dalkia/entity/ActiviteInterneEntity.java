@@ -1,40 +1,45 @@
 package fr.dalkia.entity;
 
-import javax.persistence.*;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import java.time.ZonedDateTime;
 import java.util.Objects;
+import java.util.UUID;
 
 @Entity
 @Table(name = "activite_interne", schema = "activite", catalog = "activite")
 public class ActiviteInterneEntity extends UuidEntity {
 
-    private Object dateCreation;
-    private Object idIntervenant;
+    private ZonedDateTime dateCreation;
+    private UUID idIntervenant;
     private String matricule;
     private String email;
     private String origine;
     private boolean planifiee;
     private String idTempo;
     private String typeActiviteInternePlanifiee;
-    private Object planificationDateDebut;
-    private Object planificationDateFin;
+    private ZonedDateTime planificationDateDebut;
+    private ZonedDateTime planificationDateFin;
 
     @Basic
     @Column(name = "date_creation", nullable = false)
-    public Object getDateCreation() {
+    public ZonedDateTime getDateCreation() {
         return dateCreation;
     }
 
-    public void setDateCreation(Object dateCreation) {
+    public void setDateCreation(ZonedDateTime dateCreation) {
         this.dateCreation = dateCreation;
     }
 
     @Basic
     @Column(name = "id_intervenant", nullable = false)
-    public Object getIdIntervenant() {
+    public UUID getIdIntervenant() {
         return idIntervenant;
     }
 
-    public void setIdIntervenant(Object idIntervenant) {
+    public void setIdIntervenant(UUID idIntervenant) {
         this.idIntervenant = idIntervenant;
     }
 
@@ -100,21 +105,21 @@ public class ActiviteInterneEntity extends UuidEntity {
 
     @Basic
     @Column(name = "planification_date_debut", nullable = true)
-    public Object getPlanificationDateDebut() {
+    public ZonedDateTime getPlanificationDateDebut() {
         return planificationDateDebut;
     }
 
-    public void setPlanificationDateDebut(Object planificationDateDebut) {
+    public void setPlanificationDateDebut(ZonedDateTime planificationDateDebut) {
         this.planificationDateDebut = planificationDateDebut;
     }
 
     @Basic
     @Column(name = "planification_date_fin", nullable = true)
-    public Object getPlanificationDateFin() {
+    public ZonedDateTime getPlanificationDateFin() {
         return planificationDateFin;
     }
 
-    public void setPlanificationDateFin(Object planificationDateFin) {
+    public void setPlanificationDateFin(ZonedDateTime planificationDateFin) {
         this.planificationDateFin = planificationDateFin;
     }
 

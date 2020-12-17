@@ -2,15 +2,16 @@ package fr.dalkia.entity;
 
 import javax.persistence.*;
 import java.math.BigInteger;
+import java.time.OffsetDateTime;
 import java.util.Objects;
 
 @Entity
 @Table(name = "condition_releve", schema = "activite", catalog = "activite")
 public class ConditionReleveEntity extends UuidEntity {
 
-    private Object dateCreation;
-    private Object dateModification;
-    private Object heureMesure;
+    private OffsetDateTime dateCreation;
+    private OffsetDateTime dateModification;
+    private OffsetDateTime heureMesure;
     private BigInteger temperatureExterieure;
     private String valeurSoleil;
     private String valeurPluie;
@@ -21,31 +22,31 @@ public class ConditionReleveEntity extends UuidEntity {
 
     @Basic
     @Column(name = "date_creation", nullable = false)
-    public Object getDateCreation() {
+    public OffsetDateTime getDateCreation() {
         return dateCreation;
     }
 
-    public void setDateCreation(Object dateCreation) {
+    public void setDateCreation(OffsetDateTime dateCreation) {
         this.dateCreation = dateCreation;
     }
 
     @Basic
     @Column(name = "date_modification", nullable = true)
-    public Object getDateModification() {
+    public OffsetDateTime getDateModification() {
         return dateModification;
     }
 
-    public void setDateModification(Object dateModification) {
+    public void setDateModification(OffsetDateTime dateModification) {
         this.dateModification = dateModification;
     }
 
     @Basic
     @Column(name = "heure_mesure", nullable = false)
-    public Object getHeureMesure() {
+    public OffsetDateTime getHeureMesure() {
         return heureMesure;
     }
 
-    public void setHeureMesure(Object heureMesure) {
+    public void setHeureMesure(OffsetDateTime heureMesure) {
         this.heureMesure = heureMesure;
     }
 

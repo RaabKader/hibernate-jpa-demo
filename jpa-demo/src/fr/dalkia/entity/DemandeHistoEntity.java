@@ -1,6 +1,10 @@
 package fr.dalkia.entity;
 
-import javax.persistence.*;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import java.time.OffsetDateTime;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -10,26 +14,26 @@ public class DemandeHistoEntity extends UuidEntity {
     private UUID id;
     private UUID idInstanceGmao;
     private String idDemandeGmao;
-    private Object dateMaj;
+    private OffsetDateTime dateMaj;
     private int idCanalMaj;
     private int idCanalCreation;
-    private Object dateCreationGmao;
-    private Object dateMajGmao;
+    private OffsetDateTime dateCreationGmao;
+    private OffsetDateTime dateMajGmao;
     private String referenceExterne;
     private int idStatut;
     private String description;
     private String commentaireClient;
     private String commentaireInterne;
-    private Object dateDebutCible;
-    private Object dateFinCible;
-    private Object dateDebutReel;
-    private Object dateFinReel;
+    private OffsetDateTime dateDebutCible;
+    private OffsetDateTime dateFinCible;
+    private OffsetDateTime dateDebutReel;
+    private OffsetDateTime dateFinReel;
     private Integer idTypeDemande;
     private String dkCodeDemande;
-    private Object idParent;
-    private Object dateEnvoiGmaoCreation;
-    private Object dateEnvoiGmaoMaj;
-    private Object idLocalisation;
+    private UUID idParent;
+    private OffsetDateTime dateEnvoiGmaoCreation;
+    private OffsetDateTime dateEnvoiGmaoMaj;
+    private UUID idLocalisation;
     private String codeDi;
     private String criticiteCodeGmao;
     private String criticiteDescription;
@@ -58,11 +62,11 @@ public class DemandeHistoEntity extends UuidEntity {
 
     @Basic
     @Column(name = "date_maj", nullable = false)
-    public Object getDateMaj() {
+    public OffsetDateTime getDateMaj() {
         return dateMaj;
     }
 
-    public void setDateMaj(Object dateMaj) {
+    public void setDateMaj(OffsetDateTime dateMaj) {
         this.dateMaj = dateMaj;
     }
 
@@ -88,21 +92,21 @@ public class DemandeHistoEntity extends UuidEntity {
 
     @Basic
     @Column(name = "date_creation_gmao", nullable = true)
-    public Object getDateCreationGmao() {
+    public OffsetDateTime getDateCreationGmao() {
         return dateCreationGmao;
     }
 
-    public void setDateCreationGmao(Object dateCreationGmao) {
+    public void setDateCreationGmao(OffsetDateTime dateCreationGmao) {
         this.dateCreationGmao = dateCreationGmao;
     }
 
     @Basic
     @Column(name = "date_maj_gmao", nullable = true)
-    public Object getDateMajGmao() {
+    public OffsetDateTime getDateMajGmao() {
         return dateMajGmao;
     }
 
-    public void setDateMajGmao(Object dateMajGmao) {
+    public void setDateMajGmao(OffsetDateTime dateMajGmao) {
         this.dateMajGmao = dateMajGmao;
     }
 
@@ -158,41 +162,41 @@ public class DemandeHistoEntity extends UuidEntity {
 
     @Basic
     @Column(name = "date_debut_cible", nullable = true)
-    public Object getDateDebutCible() {
+    public OffsetDateTime getDateDebutCible() {
         return dateDebutCible;
     }
 
-    public void setDateDebutCible(Object dateDebutCible) {
+    public void setDateDebutCible(OffsetDateTime dateDebutCible) {
         this.dateDebutCible = dateDebutCible;
     }
 
     @Basic
     @Column(name = "date_fin_cible", nullable = true)
-    public Object getDateFinCible() {
+    public OffsetDateTime getDateFinCible() {
         return dateFinCible;
     }
 
-    public void setDateFinCible(Object dateFinCible) {
+    public void setDateFinCible(OffsetDateTime dateFinCible) {
         this.dateFinCible = dateFinCible;
     }
 
     @Basic
     @Column(name = "date_debut_reel", nullable = true)
-    public Object getDateDebutReel() {
+    public OffsetDateTime getDateDebutReel() {
         return dateDebutReel;
     }
 
-    public void setDateDebutReel(Object dateDebutReel) {
+    public void setDateDebutReel(OffsetDateTime dateDebutReel) {
         this.dateDebutReel = dateDebutReel;
     }
 
     @Basic
     @Column(name = "date_fin_reel", nullable = true)
-    public Object getDateFinReel() {
+    public OffsetDateTime getDateFinReel() {
         return dateFinReel;
     }
 
-    public void setDateFinReel(Object dateFinReel) {
+    public void setDateFinReel(OffsetDateTime dateFinReel) {
         this.dateFinReel = dateFinReel;
     }
 
@@ -218,41 +222,41 @@ public class DemandeHistoEntity extends UuidEntity {
 
     @Basic
     @Column(name = "id_parent", nullable = true)
-    public Object getIdParent() {
+    public UUID getIdParent() {
         return idParent;
     }
 
-    public void setIdParent(Object idParent) {
+    public void setIdParent(UUID idParent) {
         this.idParent = idParent;
     }
 
     @Basic
     @Column(name = "date_envoi_gmao_creation", nullable = true)
-    public Object getDateEnvoiGmaoCreation() {
+    public OffsetDateTime getDateEnvoiGmaoCreation() {
         return dateEnvoiGmaoCreation;
     }
 
-    public void setDateEnvoiGmaoCreation(Object dateEnvoiGmaoCreation) {
+    public void setDateEnvoiGmaoCreation(OffsetDateTime dateEnvoiGmaoCreation) {
         this.dateEnvoiGmaoCreation = dateEnvoiGmaoCreation;
     }
 
     @Basic
     @Column(name = "date_envoi_gmao_maj", nullable = true)
-    public Object getDateEnvoiGmaoMaj() {
+    public OffsetDateTime getDateEnvoiGmaoMaj() {
         return dateEnvoiGmaoMaj;
     }
 
-    public void setDateEnvoiGmaoMaj(Object dateEnvoiGmaoMaj) {
+    public void setDateEnvoiGmaoMaj(OffsetDateTime dateEnvoiGmaoMaj) {
         this.dateEnvoiGmaoMaj = dateEnvoiGmaoMaj;
     }
 
     @Basic
     @Column(name = "id_localisation", nullable = false)
-    public Object getIdLocalisation() {
+    public UUID getIdLocalisation() {
         return idLocalisation;
     }
 
-    public void setIdLocalisation(Object idLocalisation) {
+    public void setIdLocalisation(UUID idLocalisation) {
         this.idLocalisation = idLocalisation;
     }
 

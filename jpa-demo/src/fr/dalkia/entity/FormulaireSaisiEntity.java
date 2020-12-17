@@ -1,8 +1,7 @@
 package fr.dalkia.entity;
 
-import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
+import java.time.ZonedDateTime;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -10,10 +9,11 @@ import java.util.UUID;
 @Table(name = "formulaire_saisi", schema = "activite", catalog = "activite")
 @IdClass(FormulaireSaisiEntityPK.class)
 public class FormulaireSaisiEntity {
+
     private UUID idFormulaire;
     private String contenu;
-    private Object dateCreation;
-    private Object dateModification;
+    private ZonedDateTime dateCreation;
+    private ZonedDateTime dateModification;
     private String idAuteur;
     private UUID idTypeFormulaire;
 
@@ -39,21 +39,21 @@ public class FormulaireSaisiEntity {
 
     @Basic
     @Column(name = "date_creation", nullable = false)
-    public Object getDateCreation() {
+    public ZonedDateTime getDateCreation() {
         return dateCreation;
     }
 
-    public void setDateCreation(Object dateCreation) {
+    public void setDateCreation(ZonedDateTime dateCreation) {
         this.dateCreation = dateCreation;
     }
 
     @Basic
     @Column(name = "date_modification", nullable = true)
-    public Object getDateModification() {
+    public ZonedDateTime getDateModification() {
         return dateModification;
     }
 
-    public void setDateModification(Object dateModification) {
+    public void setDateModification(ZonedDateTime dateModification) {
         this.dateModification = dateModification;
     }
 

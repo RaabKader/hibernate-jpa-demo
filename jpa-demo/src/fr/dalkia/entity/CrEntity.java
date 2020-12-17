@@ -1,8 +1,10 @@
 package fr.dalkia.entity;
 
 import javax.persistence.*;
+import java.time.OffsetDateTime;
 import java.util.Collection;
 import java.util.Objects;
+import java.util.UUID;
 
 @Entity
 @Table(name = "cr", schema = "activite", catalog = "activite")
@@ -11,20 +13,20 @@ public class CrEntity extends UuidEntity {
     private String statutCr;
     private String commentaireClient;
     private String commentaireManager;
-    private Object interventionDateDebut;
-    private Object interventionDateFin;
+    private OffsetDateTime interventionDateDebut;
+    private OffsetDateTime interventionDateFin;
     private Integer interventionDuree;
-    private Object deplacementDateDebut;
-    private Object deplacementDateFin;
+    private OffsetDateTime deplacementDateDebut;
+    private OffsetDateTime deplacementDateFin;
     private Integer deplacementDuree;
     private Integer dureeTotale;
-    private Object idIntervenant;
-    private Object dateCreation;
-    private Object dateModificationIntervenant;
-    private Object dateModificationMop;
+    private UUID idIntervenant;
+    private OffsetDateTime dateCreation;
+    private OffsetDateTime dateModificationIntervenant;
+    private OffsetDateTime dateModificationMop;
     private Boolean resteAFaire;
     private String origine;
-    private Object dateEnvoiVersGmao;
+    private OffsetDateTime dateEnvoiVersGmao;
     private boolean chronoUtilise;
     private boolean syntheseTempsModifie;
     private String idCrGmao;
@@ -66,21 +68,21 @@ public class CrEntity extends UuidEntity {
 
     @Basic
     @Column(name = "intervention_date_debut", nullable = true)
-    public Object getInterventionDateDebut() {
+    public OffsetDateTime getInterventionDateDebut() {
         return interventionDateDebut;
     }
 
-    public void setInterventionDateDebut(Object interventionDateDebut) {
+    public void setInterventionDateDebut(OffsetDateTime interventionDateDebut) {
         this.interventionDateDebut = interventionDateDebut;
     }
 
     @Basic
     @Column(name = "intervention_date_fin", nullable = true)
-    public Object getInterventionDateFin() {
+    public OffsetDateTime getInterventionDateFin() {
         return interventionDateFin;
     }
 
-    public void setInterventionDateFin(Object interventionDateFin) {
+    public void setInterventionDateFin(OffsetDateTime interventionDateFin) {
         this.interventionDateFin = interventionDateFin;
     }
 
@@ -96,21 +98,21 @@ public class CrEntity extends UuidEntity {
 
     @Basic
     @Column(name = "deplacement_date_debut", nullable = true)
-    public Object getDeplacementDateDebut() {
+    public OffsetDateTime getDeplacementDateDebut() {
         return deplacementDateDebut;
     }
 
-    public void setDeplacementDateDebut(Object deplacementDateDebut) {
+    public void setDeplacementDateDebut(OffsetDateTime deplacementDateDebut) {
         this.deplacementDateDebut = deplacementDateDebut;
     }
 
     @Basic
     @Column(name = "deplacement_date_fin", nullable = true)
-    public Object getDeplacementDateFin() {
+    public OffsetDateTime getDeplacementDateFin() {
         return deplacementDateFin;
     }
 
-    public void setDeplacementDateFin(Object deplacementDateFin) {
+    public void setDeplacementDateFin(OffsetDateTime deplacementDateFin) {
         this.deplacementDateFin = deplacementDateFin;
     }
 
@@ -136,41 +138,41 @@ public class CrEntity extends UuidEntity {
 
     @Basic
     @Column(name = "id_intervenant", nullable = true)
-    public Object getIdIntervenant() {
+    public UUID getIdIntervenant() {
         return idIntervenant;
     }
 
-    public void setIdIntervenant(Object idIntervenant) {
+    public void setIdIntervenant(UUID idIntervenant) {
         this.idIntervenant = idIntervenant;
     }
 
     @Basic
     @Column(name = "date_creation", nullable = true)
-    public Object getDateCreation() {
+    public OffsetDateTime getDateCreation() {
         return dateCreation;
     }
 
-    public void setDateCreation(Object dateCreation) {
+    public void setDateCreation(OffsetDateTime dateCreation) {
         this.dateCreation = dateCreation;
     }
 
     @Basic
     @Column(name = "date_modification_intervenant", nullable = true)
-    public Object getDateModificationIntervenant() {
+    public OffsetDateTime getDateModificationIntervenant() {
         return dateModificationIntervenant;
     }
 
-    public void setDateModificationIntervenant(Object dateModificationIntervenant) {
+    public void setDateModificationIntervenant(OffsetDateTime dateModificationIntervenant) {
         this.dateModificationIntervenant = dateModificationIntervenant;
     }
 
     @Basic
     @Column(name = "date_modification_mop", nullable = true)
-    public Object getDateModificationMop() {
+    public OffsetDateTime getDateModificationMop() {
         return dateModificationMop;
     }
 
-    public void setDateModificationMop(Object dateModificationMop) {
+    public void setDateModificationMop(OffsetDateTime dateModificationMop) {
         this.dateModificationMop = dateModificationMop;
     }
 
@@ -196,11 +198,11 @@ public class CrEntity extends UuidEntity {
 
     @Basic
     @Column(name = "date_envoi_vers_gmao", nullable = true)
-    public Object getDateEnvoiVersGmao() {
+    public OffsetDateTime getDateEnvoiVersGmao() {
         return dateEnvoiVersGmao;
     }
 
-    public void setDateEnvoiVersGmao(Object dateEnvoiVersGmao) {
+    public void setDateEnvoiVersGmao(OffsetDateTime dateEnvoiVersGmao) {
         this.dateEnvoiVersGmao = dateEnvoiVersGmao;
     }
 
@@ -244,6 +246,34 @@ public class CrEntity extends UuidEntity {
         this.motifCrPartiel = motifCrPartiel;
     }
 
+    @OneToMany(mappedBy = "crByIdCr")
+    public Collection<ConditionReleveEntity> getConditionRelevesById() {
+        return conditionRelevesById;
+    }
+
+    public void setConditionRelevesById(Collection<ConditionReleveEntity> conditionRelevesById) {
+        this.conditionRelevesById = conditionRelevesById;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "id_ot", referencedColumnName = "id")
+    public OtEntity getOtByIdOt() {
+        return otByIdOt;
+    }
+
+    public void setOtByIdOt(OtEntity otByIdOt) {
+        this.otByIdOt = otByIdOt;
+    }
+
+    @OneToMany(mappedBy = "crByIdCr")
+    public Collection<CrDocumentEntity> getCrDocumentsById() {
+        return crDocumentsById;
+    }
+
+    public void setCrDocumentsById(Collection<CrDocumentEntity> crDocumentsById) {
+        this.crDocumentsById = crDocumentsById;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -276,33 +306,5 @@ public class CrEntity extends UuidEntity {
     @Override
     public int hashCode() {
         return Objects.hash(id, statutCr, commentaireClient, commentaireManager, interventionDateDebut, interventionDateFin, interventionDuree, deplacementDateDebut, deplacementDateFin, deplacementDuree, dureeTotale, idIntervenant, dateCreation, dateModificationIntervenant, dateModificationMop, resteAFaire, origine, dateEnvoiVersGmao, chronoUtilise, syntheseTempsModifie, idCrGmao, motifCrPartiel);
-    }
-
-    @OneToMany(mappedBy = "crByIdCr")
-    public Collection<ConditionReleveEntity> getConditionRelevesById() {
-        return conditionRelevesById;
-    }
-
-    public void setConditionRelevesById(Collection<ConditionReleveEntity> conditionRelevesById) {
-        this.conditionRelevesById = conditionRelevesById;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "id_ot", referencedColumnName = "id")
-    public OtEntity getOtByIdOt() {
-        return otByIdOt;
-    }
-
-    public void setOtByIdOt(OtEntity otByIdOt) {
-        this.otByIdOt = otByIdOt;
-    }
-
-    @OneToMany(mappedBy = "crByIdCr")
-    public Collection<CrDocumentEntity> getCrDocumentsById() {
-        return crDocumentsById;
-    }
-
-    public void setCrDocumentsById(Collection<CrDocumentEntity> crDocumentsById) {
-        this.crDocumentsById = crDocumentsById;
     }
 }

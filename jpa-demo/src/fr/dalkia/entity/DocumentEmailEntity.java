@@ -1,8 +1,10 @@
 package fr.dalkia.entity;
 
-import org.hibernate.annotations.GenericGenerator;
-
-import javax.persistence.*;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import java.time.ZonedDateTime;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -12,7 +14,7 @@ public class DocumentEmailEntity extends UuidEntity{
 
     private UUID idDocument;
     private String email;
-    private Object date;
+    private ZonedDateTime date;
 
     @Basic
     @Column(name = "id_document", nullable = true)
@@ -36,11 +38,11 @@ public class DocumentEmailEntity extends UuidEntity{
 
     @Basic
     @Column(name = "date", nullable = false)
-    public Object getDate() {
+    public ZonedDateTime getDate() {
         return date;
     }
 
-    public void setDate(Object date) {
+    public void setDate(ZonedDateTime date) {
         this.date = date;
     }
 

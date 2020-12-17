@@ -1,6 +1,7 @@
 package fr.dalkia.entity;
 
 import javax.persistence.*;
+import java.time.ZonedDateTime;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -11,7 +12,7 @@ public class CrDocumentEntity extends UuidEntity {
     private UUID idDocument;
     private Boolean signatureClient;
     private Boolean signatureIntervenant;
-    private Object dateCreation;
+    private ZonedDateTime dateCreation;
     private String categorie;
     private Integer size;
     private CrEntity crByIdCr;
@@ -48,11 +49,11 @@ public class CrDocumentEntity extends UuidEntity {
 
     @Basic
     @Column(name = "date_creation", nullable = false)
-    public Object getDateCreation() {
+    public ZonedDateTime getDateCreation() {
         return dateCreation;
     }
 
-    public void setDateCreation(Object dateCreation) {
+    public void setDateCreation(ZonedDateTime dateCreation) {
         this.dateCreation = dateCreation;
     }
 

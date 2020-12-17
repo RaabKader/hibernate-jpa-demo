@@ -1,8 +1,7 @@
 package fr.dalkia.entity;
 
-import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
+import java.time.ZonedDateTime;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -12,7 +11,7 @@ public class OtEntity extends UuidEntity{
 
     private String idGmao;
     private String idInstanceGmao;
-    private Object dateImport;
+    private ZonedDateTime dateImport;
     private String numeroOt;
     private String typeActivite;
     private String periodiciteCode;
@@ -23,31 +22,31 @@ public class OtEntity extends UuidEntity{
     private String conditionSla;
     private Boolean existanceSla;
     private boolean multiIntervenant;
-    private Object dateModification;
+    private ZonedDateTime dateModification;
     private String idOtParentGmao;
-    private Object previsionDateDebut;
-    private Object previsionDateFin;
+    private ZonedDateTime previsionDateDebut;
+    private ZonedDateTime previsionDateFin;
     private String previsionDuree;
-    private Object planDateDebut;
-    private Object planDateFin;
+    private ZonedDateTime planDateDebut;
+    private ZonedDateTime planDateFin;
     private String idAuteurGmao;
     private Boolean idAuteurOtDlk;
     private Boolean estRdvClient;
     private Boolean estControleReglementaire;
     private String statutOt;
-    private Object statutDateValidationMop;
-    private Object statutDateClotureIntervenant;
-    private Object statutDateCreation;
+    private ZonedDateTime statutDateValidationMop;
+    private ZonedDateTime statutDateClotureIntervenant;
+    private ZonedDateTime statutDateCreation;
     private String origine;
-    private Object dateEnvoiVersGmao;
-    private Object dateMajVersGmao;
+    private ZonedDateTime dateEnvoiVersGmao;
+    private ZonedDateTime dateMajVersGmao;
     private Boolean statutRealisationPartiel;
-    private Object idOtParentDlk;
+    private UUID idOtParentDlk;
     private String numeroOtParent;
     private String canalModification;
     private String typeActiviteSigma;
-    private Object datePlafond;
-    private Object datePlancher;
+    private ZonedDateTime datePlafond;
+    private ZonedDateTime datePlancher;
     private String numeroOtCsc;
     private String typologie;
     private String sousTypologie;
@@ -55,7 +54,7 @@ public class OtEntity extends UuidEntity{
     private String numeroFicheMp;
     private String numeroGamme;
     private String numeroArret;
-    private Object dateEnvoiVersPivot;
+    private ZonedDateTime dateEnvoiVersPivot;
     private DemandeEntity demandeByIdDemande;
 
     @Basic
@@ -80,11 +79,11 @@ public class OtEntity extends UuidEntity{
 
     @Basic
     @Column(name = "date_import", nullable = false)
-    public Object getDateImport() {
+    public ZonedDateTime getDateImport() {
         return dateImport;
     }
 
-    public void setDateImport(Object dateImport) {
+    public void setDateImport(ZonedDateTime dateImport) {
         this.dateImport = dateImport;
     }
 
@@ -190,11 +189,11 @@ public class OtEntity extends UuidEntity{
 
     @Basic
     @Column(name = "date_modification", nullable = true)
-    public Object getDateModification() {
+    public ZonedDateTime getDateModification() {
         return dateModification;
     }
 
-    public void setDateModification(Object dateModification) {
+    public void setDateModification(ZonedDateTime dateModification) {
         this.dateModification = dateModification;
     }
 
@@ -210,21 +209,21 @@ public class OtEntity extends UuidEntity{
 
     @Basic
     @Column(name = "prevision_date_debut", nullable = true)
-    public Object getPrevisionDateDebut() {
+    public ZonedDateTime getPrevisionDateDebut() {
         return previsionDateDebut;
     }
 
-    public void setPrevisionDateDebut(Object previsionDateDebut) {
+    public void setPrevisionDateDebut(ZonedDateTime previsionDateDebut) {
         this.previsionDateDebut = previsionDateDebut;
     }
 
     @Basic
     @Column(name = "prevision_date_fin", nullable = true)
-    public Object getPrevisionDateFin() {
+    public ZonedDateTime getPrevisionDateFin() {
         return previsionDateFin;
     }
 
-    public void setPrevisionDateFin(Object previsionDateFin) {
+    public void setPrevisionDateFin(ZonedDateTime previsionDateFin) {
         this.previsionDateFin = previsionDateFin;
     }
 
@@ -240,21 +239,21 @@ public class OtEntity extends UuidEntity{
 
     @Basic
     @Column(name = "plan_date_debut", nullable = true)
-    public Object getPlanDateDebut() {
+    public ZonedDateTime getPlanDateDebut() {
         return planDateDebut;
     }
 
-    public void setPlanDateDebut(Object planDateDebut) {
+    public void setPlanDateDebut(ZonedDateTime planDateDebut) {
         this.planDateDebut = planDateDebut;
     }
 
     @Basic
     @Column(name = "plan_date_fin", nullable = true)
-    public Object getPlanDateFin() {
+    public ZonedDateTime getPlanDateFin() {
         return planDateFin;
     }
 
-    public void setPlanDateFin(Object planDateFin) {
+    public void setPlanDateFin(ZonedDateTime planDateFin) {
         this.planDateFin = planDateFin;
     }
 
@@ -310,31 +309,31 @@ public class OtEntity extends UuidEntity{
 
     @Basic
     @Column(name = "statut_date_validation_mop", nullable = true)
-    public Object getStatutDateValidationMop() {
+    public ZonedDateTime getStatutDateValidationMop() {
         return statutDateValidationMop;
     }
 
-    public void setStatutDateValidationMop(Object statutDateValidationMop) {
+    public void setStatutDateValidationMop(ZonedDateTime statutDateValidationMop) {
         this.statutDateValidationMop = statutDateValidationMop;
     }
 
     @Basic
     @Column(name = "statut_date_cloture_intervenant", nullable = true)
-    public Object getStatutDateClotureIntervenant() {
+    public ZonedDateTime getStatutDateClotureIntervenant() {
         return statutDateClotureIntervenant;
     }
 
-    public void setStatutDateClotureIntervenant(Object statutDateClotureIntervenant) {
+    public void setStatutDateClotureIntervenant(ZonedDateTime statutDateClotureIntervenant) {
         this.statutDateClotureIntervenant = statutDateClotureIntervenant;
     }
 
     @Basic
     @Column(name = "statut_date_creation", nullable = true)
-    public Object getStatutDateCreation() {
+    public ZonedDateTime getStatutDateCreation() {
         return statutDateCreation;
     }
 
-    public void setStatutDateCreation(Object statutDateCreation) {
+    public void setStatutDateCreation(ZonedDateTime statutDateCreation) {
         this.statutDateCreation = statutDateCreation;
     }
 
@@ -350,21 +349,21 @@ public class OtEntity extends UuidEntity{
 
     @Basic
     @Column(name = "date_envoi_vers_gmao", nullable = true)
-    public Object getDateEnvoiVersGmao() {
+    public ZonedDateTime getDateEnvoiVersGmao() {
         return dateEnvoiVersGmao;
     }
 
-    public void setDateEnvoiVersGmao(Object dateEnvoiVersGmao) {
+    public void setDateEnvoiVersGmao(ZonedDateTime dateEnvoiVersGmao) {
         this.dateEnvoiVersGmao = dateEnvoiVersGmao;
     }
 
     @Basic
     @Column(name = "date_maj_vers_gmao", nullable = true)
-    public Object getDateMajVersGmao() {
+    public ZonedDateTime getDateMajVersGmao() {
         return dateMajVersGmao;
     }
 
-    public void setDateMajVersGmao(Object dateMajVersGmao) {
+    public void setDateMajVersGmao(ZonedDateTime dateMajVersGmao) {
         this.dateMajVersGmao = dateMajVersGmao;
     }
 
@@ -380,11 +379,11 @@ public class OtEntity extends UuidEntity{
 
     @Basic
     @Column(name = "id_ot_parent_dlk", nullable = true)
-    public Object getIdOtParentDlk() {
+    public UUID getIdOtParentDlk() {
         return idOtParentDlk;
     }
 
-    public void setIdOtParentDlk(Object idOtParentDlk) {
+    public void setIdOtParentDlk(UUID idOtParentDlk) {
         this.idOtParentDlk = idOtParentDlk;
     }
 
@@ -420,21 +419,21 @@ public class OtEntity extends UuidEntity{
 
     @Basic
     @Column(name = "date_plafond", nullable = true)
-    public Object getDatePlafond() {
+    public ZonedDateTime getDatePlafond() {
         return datePlafond;
     }
 
-    public void setDatePlafond(Object datePlafond) {
+    public void setDatePlafond(ZonedDateTime datePlafond) {
         this.datePlafond = datePlafond;
     }
 
     @Basic
     @Column(name = "date_plancher", nullable = true)
-    public Object getDatePlancher() {
+    public ZonedDateTime getDatePlancher() {
         return datePlancher;
     }
 
-    public void setDatePlancher(Object datePlancher) {
+    public void setDatePlancher(ZonedDateTime datePlancher) {
         this.datePlancher = datePlancher;
     }
 
@@ -510,11 +509,11 @@ public class OtEntity extends UuidEntity{
 
     @Basic
     @Column(name = "date_envoi_vers_pivot", nullable = true)
-    public Object getDateEnvoiVersPivot() {
+    public ZonedDateTime getDateEnvoiVersPivot() {
         return dateEnvoiVersPivot;
     }
 
-    public void setDateEnvoiVersPivot(Object dateEnvoiVersPivot) {
+    public void setDateEnvoiVersPivot(ZonedDateTime dateEnvoiVersPivot) {
         this.dateEnvoiVersPivot = dateEnvoiVersPivot;
     }
 

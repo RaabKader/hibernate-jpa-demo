@@ -1,5 +1,7 @@
 package fr.dalkia.entity;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
 import java.util.Objects;
 import java.util.UUID;
@@ -29,6 +31,10 @@ public class DmdIncidentCauseEntity {
     private DemandeEntity demandeByIdDemande_0;
 
     @Id
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator",
+            parameters = {@org.hibernate.annotations.Parameter(name = "uuid_gen_strategy_class",
+                    value = "org.hibernate.id.uuid.CustomVersionOneStrategy")})
     @Column(name = "id_demande", nullable = false)
     public UUID getIdDemande() {
         return idDemande;

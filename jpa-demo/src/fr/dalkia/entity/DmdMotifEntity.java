@@ -1,7 +1,5 @@
 package fr.dalkia.entity;
 
-import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
 import java.util.Objects;
 import java.util.UUID;
@@ -17,7 +15,7 @@ public class DmdMotifEntity extends UuidEntity{
     private Object idSousMotif;
     private Boolean motifEstSla;
     private Boolean sousMotifEstSla;
-    private Object idMotif;
+    private UUID idMotif;
     private DemandeEntity demandeByIdDemande;
 
 
@@ -93,11 +91,11 @@ public class DmdMotifEntity extends UuidEntity{
 
     @Basic
     @Column(name = "id_motif", nullable = false)
-    public Object getIdMotif() {
+    public UUID getIdMotif() {
         return idMotif;
     }
 
-    public void setIdMotif(Object idMotif) {
+    public void setIdMotif(UUID idMotif) {
         this.idMotif = idMotif;
     }
 

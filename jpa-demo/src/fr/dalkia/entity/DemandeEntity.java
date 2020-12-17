@@ -1,6 +1,7 @@
 package fr.dalkia.entity;
 
 import javax.persistence.*;
+import java.time.OffsetDateTime;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -10,33 +11,33 @@ public class DemandeEntity extends UuidEntity {
 
     private UUID idInstanceGmao;
     private String idDemandeGmao;
-    private Object dateMaj;
-    private Object dateCreationGmao;
-    private Object dateMajGmao;
+    private OffsetDateTime dateMaj;
+    private OffsetDateTime dateCreationGmao;
+    private OffsetDateTime dateMajGmao;
     private String referenceExterne;
     private int idStatut;
     private String description;
     private String commentaireClient;
     private String commentaireInterne;
-    private Object dateDebutCible;
-    private Object dateFinCible;
-    private Object dateDebutReel;
-    private Object dateFinReel;
+    private OffsetDateTime dateDebutCible;
+    private OffsetDateTime dateFinCible;
+    private OffsetDateTime dateDebutReel;
+    private OffsetDateTime dateFinReel;
     private String dkCodeDemande;
-    private Object dateEnvoiGmaoCreation;
-    private Object dateEnvoiGmaoMaj;
-    private Object idLocalisation;
+    private OffsetDateTime dateEnvoiGmaoCreation;
+    private OffsetDateTime dateEnvoiGmaoMaj;
+    private UUID idLocalisation;
     private String codeDi;
     private String criticiteCodeGmao;
     private String criticiteDescription;
     private boolean criticiteEstUrgent;
     private String impactPanne;
     private String criticiteIdGmao;
-    private Object dateLimiteAcquittement;
-    private Object dateLimiteDemarrageIntervention;
-    private Object dateLimiteFinIntervention;
-    private Object datePriseEnCharge;
-    private Object dateCreation;
+    private OffsetDateTime dateLimiteAcquittement;
+    private OffsetDateTime dateLimiteDemarrageIntervention;
+    private OffsetDateTime dateLimiteFinIntervention;
+    private OffsetDateTime datePriseEnCharge;
+    private OffsetDateTime dateCreation;
     private Boolean estAstreinte;
     private String natureCas;
     private DemandeEntity demandeByIdParent;
@@ -63,31 +64,31 @@ public class DemandeEntity extends UuidEntity {
 
     @Basic
     @Column(name = "date_maj", nullable = false)
-    public Object getDateMaj() {
+    public OffsetDateTime getDateMaj() {
         return dateMaj;
     }
 
-    public void setDateMaj(Object dateMaj) {
+    public void setDateMaj(OffsetDateTime dateMaj) {
         this.dateMaj = dateMaj;
     }
 
     @Basic
     @Column(name = "date_creation_gmao", nullable = true)
-    public Object getDateCreationGmao() {
+    public OffsetDateTime getDateCreationGmao() {
         return dateCreationGmao;
     }
 
-    public void setDateCreationGmao(Object dateCreationGmao) {
+    public void setDateCreationGmao(OffsetDateTime dateCreationGmao) {
         this.dateCreationGmao = dateCreationGmao;
     }
 
     @Basic
     @Column(name = "date_maj_gmao", nullable = true)
-    public Object getDateMajGmao() {
+    public OffsetDateTime getDateMajGmao() {
         return dateMajGmao;
     }
 
-    public void setDateMajGmao(Object dateMajGmao) {
+    public void setDateMajGmao(OffsetDateTime dateMajGmao) {
         this.dateMajGmao = dateMajGmao;
     }
 
@@ -143,41 +144,41 @@ public class DemandeEntity extends UuidEntity {
 
     @Basic
     @Column(name = "date_debut_cible", nullable = true)
-    public Object getDateDebutCible() {
+    public OffsetDateTime getDateDebutCible() {
         return dateDebutCible;
     }
 
-    public void setDateDebutCible(Object dateDebutCible) {
+    public void setDateDebutCible(OffsetDateTime dateDebutCible) {
         this.dateDebutCible = dateDebutCible;
     }
 
     @Basic
     @Column(name = "date_fin_cible", nullable = true)
-    public Object getDateFinCible() {
+    public OffsetDateTime getDateFinCible() {
         return dateFinCible;
     }
 
-    public void setDateFinCible(Object dateFinCible) {
+    public void setDateFinCible(OffsetDateTime dateFinCible) {
         this.dateFinCible = dateFinCible;
     }
 
     @Basic
     @Column(name = "date_debut_reel", nullable = true)
-    public Object getDateDebutReel() {
+    public OffsetDateTime getDateDebutReel() {
         return dateDebutReel;
     }
 
-    public void setDateDebutReel(Object dateDebutReel) {
+    public void setDateDebutReel(OffsetDateTime dateDebutReel) {
         this.dateDebutReel = dateDebutReel;
     }
 
     @Basic
     @Column(name = "date_fin_reel", nullable = true)
-    public Object getDateFinReel() {
+    public OffsetDateTime getDateFinReel() {
         return dateFinReel;
     }
 
-    public void setDateFinReel(Object dateFinReel) {
+    public void setDateFinReel(OffsetDateTime dateFinReel) {
         this.dateFinReel = dateFinReel;
     }
 
@@ -193,31 +194,31 @@ public class DemandeEntity extends UuidEntity {
 
     @Basic
     @Column(name = "date_envoi_gmao_creation", nullable = true)
-    public Object getDateEnvoiGmaoCreation() {
+    public OffsetDateTime getDateEnvoiGmaoCreation() {
         return dateEnvoiGmaoCreation;
     }
 
-    public void setDateEnvoiGmaoCreation(Object dateEnvoiGmaoCreation) {
+    public void setDateEnvoiGmaoCreation(OffsetDateTime dateEnvoiGmaoCreation) {
         this.dateEnvoiGmaoCreation = dateEnvoiGmaoCreation;
     }
 
     @Basic
     @Column(name = "date_envoi_gmao_maj", nullable = true)
-    public Object getDateEnvoiGmaoMaj() {
+    public OffsetDateTime getDateEnvoiGmaoMaj() {
         return dateEnvoiGmaoMaj;
     }
 
-    public void setDateEnvoiGmaoMaj(Object dateEnvoiGmaoMaj) {
+    public void setDateEnvoiGmaoMaj(OffsetDateTime dateEnvoiGmaoMaj) {
         this.dateEnvoiGmaoMaj = dateEnvoiGmaoMaj;
     }
 
     @Basic
     @Column(name = "id_localisation", nullable = false)
-    public Object getIdLocalisation() {
+    public UUID getIdLocalisation() {
         return idLocalisation;
     }
 
-    public void setIdLocalisation(Object idLocalisation) {
+    public void setIdLocalisation(UUID idLocalisation) {
         this.idLocalisation = idLocalisation;
     }
 
@@ -283,51 +284,51 @@ public class DemandeEntity extends UuidEntity {
 
     @Basic
     @Column(name = "date_limite_acquittement", nullable = true)
-    public Object getDateLimiteAcquittement() {
+    public OffsetDateTime getDateLimiteAcquittement() {
         return dateLimiteAcquittement;
     }
 
-    public void setDateLimiteAcquittement(Object dateLimiteAcquittement) {
+    public void setDateLimiteAcquittement(OffsetDateTime dateLimiteAcquittement) {
         this.dateLimiteAcquittement = dateLimiteAcquittement;
     }
 
     @Basic
     @Column(name = "date_limite_demarrage_intervention", nullable = true)
-    public Object getDateLimiteDemarrageIntervention() {
+    public OffsetDateTime getDateLimiteDemarrageIntervention() {
         return dateLimiteDemarrageIntervention;
     }
 
-    public void setDateLimiteDemarrageIntervention(Object dateLimiteDemarrageIntervention) {
+    public void setDateLimiteDemarrageIntervention(OffsetDateTime dateLimiteDemarrageIntervention) {
         this.dateLimiteDemarrageIntervention = dateLimiteDemarrageIntervention;
     }
 
     @Basic
     @Column(name = "date_limite_fin_intervention", nullable = true)
-    public Object getDateLimiteFinIntervention() {
+    public OffsetDateTime getDateLimiteFinIntervention() {
         return dateLimiteFinIntervention;
     }
 
-    public void setDateLimiteFinIntervention(Object dateLimiteFinIntervention) {
+    public void setDateLimiteFinIntervention(OffsetDateTime dateLimiteFinIntervention) {
         this.dateLimiteFinIntervention = dateLimiteFinIntervention;
     }
 
     @Basic
     @Column(name = "date_prise_en_charge", nullable = true)
-    public Object getDatePriseEnCharge() {
+    public OffsetDateTime getDatePriseEnCharge() {
         return datePriseEnCharge;
     }
 
-    public void setDatePriseEnCharge(Object datePriseEnCharge) {
+    public void setDatePriseEnCharge(OffsetDateTime datePriseEnCharge) {
         this.datePriseEnCharge = datePriseEnCharge;
     }
 
     @Basic
     @Column(name = "date_creation", nullable = true)
-    public Object getDateCreation() {
+    public OffsetDateTime getDateCreation() {
         return dateCreation;
     }
 
-    public void setDateCreation(Object dateCreation) {
+    public void setDateCreation(OffsetDateTime dateCreation) {
         this.dateCreation = dateCreation;
     }
 

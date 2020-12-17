@@ -1,6 +1,10 @@
 package fr.dalkia.entity;
 
-import javax.persistence.*;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import java.time.OffsetDateTime;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -9,14 +13,14 @@ import java.util.UUID;
 public class CrActiviteInterneEntity extends UuidEntity {
 
     private UUID idActiviteInterne;
-    private Object crDateCreation;
+    private OffsetDateTime crDateCreation;
     private String crCommentaireIntervenant;
     private String crTypeActiviteRealisee;
-    private Object crActiviteInterneDateDebut;
-    private Object crActiviteInterneDateFin;
+    private OffsetDateTime crActiviteInterneDateDebut;
+    private OffsetDateTime crActiviteInterneDateFin;
     private int crActiviteInterneDuree;
-    private Object crDeplacementDateDebut;
-    private Object crDeplacementDateFin;
+    private OffsetDateTime crDeplacementDateDebut;
+    private OffsetDateTime crDeplacementDateFin;
     private Integer crDeplacementDuree;
     private int crDureeTotale;
 
@@ -32,11 +36,11 @@ public class CrActiviteInterneEntity extends UuidEntity {
 
     @Basic
     @Column(name = "cr_date_creation", nullable = false)
-    public Object getCrDateCreation() {
+    public OffsetDateTime getCrDateCreation() {
         return crDateCreation;
     }
 
-    public void setCrDateCreation(Object crDateCreation) {
+    public void setCrDateCreation(OffsetDateTime crDateCreation) {
         this.crDateCreation = crDateCreation;
     }
 
@@ -62,21 +66,21 @@ public class CrActiviteInterneEntity extends UuidEntity {
 
     @Basic
     @Column(name = "cr_activite_interne_date_debut", nullable = false)
-    public Object getCrActiviteInterneDateDebut() {
+    public OffsetDateTime getCrActiviteInterneDateDebut() {
         return crActiviteInterneDateDebut;
     }
 
-    public void setCrActiviteInterneDateDebut(Object crActiviteInterneDateDebut) {
+    public void setCrActiviteInterneDateDebut(OffsetDateTime crActiviteInterneDateDebut) {
         this.crActiviteInterneDateDebut = crActiviteInterneDateDebut;
     }
 
     @Basic
     @Column(name = "cr_activite_interne_date_fin", nullable = false)
-    public Object getCrActiviteInterneDateFin() {
+    public OffsetDateTime getCrActiviteInterneDateFin() {
         return crActiviteInterneDateFin;
     }
 
-    public void setCrActiviteInterneDateFin(Object crActiviteInterneDateFin) {
+    public void setCrActiviteInterneDateFin(OffsetDateTime crActiviteInterneDateFin) {
         this.crActiviteInterneDateFin = crActiviteInterneDateFin;
     }
 
@@ -92,21 +96,21 @@ public class CrActiviteInterneEntity extends UuidEntity {
 
     @Basic
     @Column(name = "cr_deplacement_date_debut", nullable = true)
-    public Object getCrDeplacementDateDebut() {
+    public OffsetDateTime getCrDeplacementDateDebut() {
         return crDeplacementDateDebut;
     }
 
-    public void setCrDeplacementDateDebut(Object crDeplacementDateDebut) {
+    public void setCrDeplacementDateDebut(OffsetDateTime crDeplacementDateDebut) {
         this.crDeplacementDateDebut = crDeplacementDateDebut;
     }
 
     @Basic
     @Column(name = "cr_deplacement_date_fin", nullable = true)
-    public Object getCrDeplacementDateFin() {
+    public OffsetDateTime getCrDeplacementDateFin() {
         return crDeplacementDateFin;
     }
 
-    public void setCrDeplacementDateFin(Object crDeplacementDateFin) {
+    public void setCrDeplacementDateFin(OffsetDateTime crDeplacementDateFin) {
         this.crDeplacementDateFin = crDeplacementDateFin;
     }
 

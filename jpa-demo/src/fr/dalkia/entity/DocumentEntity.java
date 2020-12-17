@@ -1,8 +1,10 @@
 package fr.dalkia.entity;
 
-import org.hibernate.annotations.GenericGenerator;
-
-import javax.persistence.*;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import java.time.ZonedDateTime;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -10,11 +12,11 @@ import java.util.UUID;
 @Table(name = "document", schema = "activite", catalog = "activite")
 public class DocumentEntity extends UuidEntity{
 
-    private Object idDocumentSisdoc;
+    private UUID idDocumentSisdoc;
     private String nom;
     private String description;
-    private Object dateCreation;
-    private Object dateMaj;
+    private ZonedDateTime dateCreation;
+    private ZonedDateTime dateMaj;
     private String typeContenu;
     private String serviceProprietaire;
     private Boolean estPublic;
@@ -22,11 +24,11 @@ public class DocumentEntity extends UuidEntity{
 
     @Basic
     @Column(name = "id_document_sisdoc", nullable = true)
-    public Object getIdDocumentSisdoc() {
+    public UUID getIdDocumentSisdoc() {
         return idDocumentSisdoc;
     }
 
-    public void setIdDocumentSisdoc(Object idDocumentSisdoc) {
+    public void setIdDocumentSisdoc(UUID idDocumentSisdoc) {
         this.idDocumentSisdoc = idDocumentSisdoc;
     }
 
@@ -52,21 +54,21 @@ public class DocumentEntity extends UuidEntity{
 
     @Basic
     @Column(name = "date_creation", nullable = false)
-    public Object getDateCreation() {
+    public ZonedDateTime getDateCreation() {
         return dateCreation;
     }
 
-    public void setDateCreation(Object dateCreation) {
+    public void setDateCreation(ZonedDateTime dateCreation) {
         this.dateCreation = dateCreation;
     }
 
     @Basic
     @Column(name = "date_maj", nullable = false)
-    public Object getDateMaj() {
+    public ZonedDateTime getDateMaj() {
         return dateMaj;
     }
 
-    public void setDateMaj(Object dateMaj) {
+    public void setDateMaj(ZonedDateTime dateMaj) {
         this.dateMaj = dateMaj;
     }
 

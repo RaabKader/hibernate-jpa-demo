@@ -1,15 +1,13 @@
 package fr.dalkia.entity;
 
-import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
 import java.util.Objects;
 import java.util.UUID;
 
 @Entity
 @Table(name = "contact", schema = "activite", catalog = "activite")
-public class ContactEntity {
-    private UUID id;
+public class ContactEntity extends UuidEntity {
+
     private String civilite;
     private String nom;
     private String prenom;
@@ -26,19 +24,6 @@ public class ContactEntity {
     private Integer idTypeContact;
     private UUID idDemande;
 
-    @Id
-    @GeneratedValue(generator = "UUID")
-    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator",
-            parameters = {@org.hibernate.annotations.Parameter(name = "uuid_gen_strategy_class",
-                    value = "org.hibernate.id.uuid.CustomVersionOneStrategy")})
-    @Column(name = "id", nullable = false)
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
 
     @Basic
     @Column(name = "civilite", nullable = true, length = -1)

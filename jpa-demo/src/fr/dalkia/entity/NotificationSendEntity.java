@@ -8,28 +8,14 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "notification_send", schema = "activite", catalog = "activite")
-public class NotificationSendEntity {
-    private UUID id;
+public class NotificationSendEntity extends UuidEntity{
+
     private UUID idOt;
     private UUID idUser;
     private Object date;
     private String matricule;
     private String origine;
     private String type;
-
-    @Id
-    @GeneratedValue(generator = "UUID")
-    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator",
-            parameters = {@org.hibernate.annotations.Parameter(name = "uuid_gen_strategy_class",
-                    value = "org.hibernate.id.uuid.CustomVersionOneStrategy")})
-    @Column(name = "id", nullable = false)
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
 
     @Basic
     @Column(name = "id_ot", nullable = false)

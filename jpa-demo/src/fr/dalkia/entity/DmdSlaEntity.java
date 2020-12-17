@@ -8,27 +8,13 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "dmd_sla", schema = "activite", catalog = "activite")
-public class DmdSlaEntity {
-    private UUID id;
+public class DmdSlaEntity extends UuidEntity{
+
     private String codeGmao;
     private String valeur;
     private String delaiResolution;
     private DemandeEntity demandeByIdDemande;
-
-    @Id
-    @GeneratedValue(generator = "UUID")
-    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator",
-            parameters = {@org.hibernate.annotations.Parameter(name = "uuid_gen_strategy_class",
-                    value = "org.hibernate.id.uuid.CustomVersionOneStrategy")})
-    @Column(name = "id", nullable = false)
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
-
+    
     @Basic
     @Column(name = "code_gmao", nullable = true, length = -1)
     public String getCodeGmao() {

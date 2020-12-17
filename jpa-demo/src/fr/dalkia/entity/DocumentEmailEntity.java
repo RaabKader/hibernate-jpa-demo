@@ -8,25 +8,11 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "document_email", schema = "activite", catalog = "activite")
-public class DocumentEmailEntity {
-    private UUID id;
+public class DocumentEmailEntity extends UuidEntity{
+
     private UUID idDocument;
     private String email;
     private Object date;
-
-    @Id
-    @GeneratedValue(generator = "UUID")
-    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator",
-            parameters = {@org.hibernate.annotations.Parameter(name = "uuid_gen_strategy_class",
-                    value = "org.hibernate.id.uuid.CustomVersionOneStrategy")})
-    @Column(name = "id", nullable = false)
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
 
     @Basic
     @Column(name = "id_document", nullable = true)

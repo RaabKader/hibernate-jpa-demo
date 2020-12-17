@@ -1,16 +1,13 @@
 package fr.dalkia.entity;
 
-import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.Objects;
-import java.util.UUID;
 
 @Entity
 @Table(name = "cr", schema = "activite", catalog = "activite")
-public class CrEntity {
-    private UUID id;
+public class CrEntity extends UuidEntity {
+
     private String statutCr;
     private String commentaireClient;
     private String commentaireManager;
@@ -36,19 +33,6 @@ public class CrEntity {
     private OtEntity otByIdOt;
     private Collection<CrDocumentEntity> crDocumentsById;
 
-    @Id
-    @GeneratedValue(generator = "UUID")
-    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator",
-            parameters = {@org.hibernate.annotations.Parameter(name = "uuid_gen_strategy_class",
-                    value = "org.hibernate.id.uuid.CustomVersionOneStrategy")})
-    @Column(name = "id", nullable = false)
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
 
     @Basic
     @Column(name = "statut_cr", nullable = true, length = -1)

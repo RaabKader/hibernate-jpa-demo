@@ -8,8 +8,8 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "dmd_contact", schema = "activite", catalog = "activite")
-public class DmdContactEntity {
-    private UUID id;
+public class DmdContactEntity extends UuidEntity{
+
     private String civilite;
     private String prenom;
     private String nom;
@@ -28,19 +28,6 @@ public class DmdContactEntity {
     private String fonction;
     private DemandeEntity demandeByIdDemande;
 
-    @Id
-    @GeneratedValue(generator = "UUID")
-    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator",
-            parameters = {@org.hibernate.annotations.Parameter(name = "uuid_gen_strategy_class",
-                    value = "org.hibernate.id.uuid.CustomVersionOneStrategy")})
-    @Column(name = "id", nullable = false)
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
 
     @Basic
     @Column(name = "civilite", nullable = true, length = -1)

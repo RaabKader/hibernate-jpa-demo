@@ -8,8 +8,8 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "ot", schema = "activite", catalog = "activite")
-public class OtEntity {
-    private UUID id;
+public class OtEntity extends UuidEntity{
+
     private String idGmao;
     private String idInstanceGmao;
     private Object dateImport;
@@ -57,20 +57,6 @@ public class OtEntity {
     private String numeroArret;
     private Object dateEnvoiVersPivot;
     private DemandeEntity demandeByIdDemande;
-
-    @Id
-    @GeneratedValue(generator = "UUID")
-    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator",
-            parameters = {@org.hibernate.annotations.Parameter(name = "uuid_gen_strategy_class",
-                    value = "org.hibernate.id.uuid.CustomVersionOneStrategy")})
-    @Column(name = "id", nullable = false)
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
 
     @Basic
     @Column(name = "id_gmao", nullable = true, length = -1)

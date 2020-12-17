@@ -1,16 +1,13 @@
 package fr.dalkia.entity;
 
-import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
 import java.math.BigInteger;
 import java.util.Objects;
-import java.util.UUID;
 
 @Entity
 @Table(name = "condition_releve", schema = "activite", catalog = "activite")
-public class ConditionReleveEntity {
-    private UUID id;
+public class ConditionReleveEntity extends UuidEntity {
+
     private Object dateCreation;
     private Object dateModification;
     private Object heureMesure;
@@ -21,19 +18,6 @@ public class ConditionReleveEntity {
     private String observations;
     private CrEntity crByIdCr;
 
-    @Id
-    @GeneratedValue(generator = "UUID")
-    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator",
-            parameters = {@org.hibernate.annotations.Parameter(name = "uuid_gen_strategy_class",
-                    value = "org.hibernate.id.uuid.CustomVersionOneStrategy")})
-    @Column(name = "id", nullable = false)
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
 
     @Basic
     @Column(name = "date_creation", nullable = false)

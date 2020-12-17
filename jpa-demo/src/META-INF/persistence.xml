@@ -3,48 +3,48 @@
 
     <persistence-unit name="ActivitePU">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <class>fr.dalkia.entity.ActiviteInterneEntity</class>
-        <class>fr.dalkia.entity.ConditionReleveEntity</class>
-        <class>fr.dalkia.entity.ContactEntity</class>
-        <class>fr.dalkia.entity.CrEntity</class>
-        <class>fr.dalkia.entity.CrActiviteInterneEntity</class>
-        <class>fr.dalkia.entity.CrDocumentEntity</class>
-        <class>fr.dalkia.entity.DemandeEntity</class>
-        <class>fr.dalkia.entity.DemandeHistoEntity</class>
-        <class>fr.dalkia.entity.DmdAlarmeCauseEntity</class>
-        <class>fr.dalkia.entity.DmdCanalEntity</class>
-        <class>fr.dalkia.entity.DmdContactEntity</class>
+        <class>fr.dalkia.entity.ActiviteInterneIdBase</class>
+        <class>fr.dalkia.entity.ConditionReleveIdBase</class>
+        <class>fr.dalkia.entity.ContactIdBase</class>
+        <class>fr.dalkia.entity.CrIdBase</class>
+        <class>fr.dalkia.entity.CrActiviteInterneIdBase</class>
+        <class>fr.dalkia.entity.CrDocumentIdBase</class>
+        <class>fr.dalkia.entity.DemandeIdBase</class>
+        <class>fr.dalkia.entity.DemandeHistoIdBase</class>
+        <class>fr.dalkia.entity.DmdAlarmeCauseIdBase</class>
+        <class>fr.dalkia.entity.DmdCanalBaseInt</class>
+        <class>fr.dalkia.entity.DmdContactIdBase</class>
         <class>fr.dalkia.entity.DmdDaCauseEntity</class>
-        <class>fr.dalkia.entity.DmdDocumentEntity</class>
-        <class>fr.dalkia.entity.DmdEquipementEntity</class>
+        <class>fr.dalkia.entity.DmdDocumentIdBase</class>
+        <class>fr.dalkia.entity.DmdEquipementIdBase</class>
         <class>fr.dalkia.entity.DmdIncidentCauseEntity</class>
         <class>fr.dalkia.entity.DmdMgtCauseEntity</class>
-        <class>fr.dalkia.entity.DmdMotifEntity</class>
-        <class>fr.dalkia.entity.DmdSlaEntity</class>
-        <class>fr.dalkia.entity.DmdStatutEntity</class>
-        <class>fr.dalkia.entity.DocumentEntity</class>
-        <class>fr.dalkia.entity.DocumentEmailEntity</class>
+        <class>fr.dalkia.entity.DmdMotifIdBase</class>
+        <class>fr.dalkia.entity.DmdSlaIdBase</class>
+        <class>fr.dalkia.entity.DmdStatutBaseInt</class>
+        <class>fr.dalkia.entity.DocumentIdBase</class>
+        <class>fr.dalkia.entity.DocumentEmailIdBase</class>
         <class>fr.dalkia.entity.FormulaireSaisiEntity</class>
-        <class>fr.dalkia.entity.NotificationSendEntity</class>
-        <class>fr.dalkia.entity.OtEntity</class>
+        <class>fr.dalkia.entity.NotificationSendIdBase</class>
+        <class>fr.dalkia.entity.OtIdBase</class>
         <class>fr.dalkia.entity.OtDemandeInterventionEntity</class>
         <class>fr.dalkia.entity.OtEquipementEntity</class>
         <class>fr.dalkia.entity.OtFormulaireEntity</class>
         <class>fr.dalkia.entity.OtFormulaireSaisiEntity</class>
-        <class>fr.dalkia.entity.OtHistoEntity</class>
+        <class>fr.dalkia.entity.OtHistoIdBase</class>
         <class>fr.dalkia.entity.OtInstallationEntity</class>
-        <class>fr.dalkia.entity.OtIntervenantEntity</class>
-        <class>fr.dalkia.entity.OtIntervenantHistoEntity</class>
-        <class>fr.dalkia.entity.OtLocalisationEntity</class>
-        <class>fr.dalkia.entity.OtPriseEnCompteIntervenantEntity</class>
+        <class>fr.dalkia.entity.OtIntervenantIdBase</class>
+        <class>fr.dalkia.entity.OtIntervenantHistoIdBase</class>
+        <class>fr.dalkia.entity.OtLocalisationIdBase</class>
+        <class>fr.dalkia.entity.OtPriseEnCompteIntervenantIdBase</class>
         <class>fr.dalkia.entity.OtUoEntity</class>
-        <class>fr.dalkia.entity.ReleveTemperatureEntity</class>
-        <class>fr.dalkia.entity.SyntheseEntity</class>
-        <class>fr.dalkia.entity.TacheEntity</class>
-        <class>fr.dalkia.entity.TypeContactEntity</class>
-        <class>fr.dalkia.entity.TypeDemandeEntity</class>
-        <class>fr.dalkia.entity.UtilisationDactechEntity</class>
-        <class>fr.dalkia.entity.WoSigmaCscEntity</class>
+        <class>fr.dalkia.entity.ReleveTemperatureIdBase</class>
+        <class>fr.dalkia.entity.SyntheseBaseInt</class>
+        <class>fr.dalkia.entity.TacheIdBase</class>
+        <class>fr.dalkia.entity.TypeContactBaseInt</class>
+        <class>fr.dalkia.entity.TypeDemandeBaseInt</class>
+        <class>fr.dalkia.entity.UtilisationDactechIdBase</class>
+        <class>fr.dalkia.entity.WoSigmaCscBaseInt</class>
         <properties>
             <property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5432/postgres"/>
             <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>

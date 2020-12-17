@@ -9,8 +9,8 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "releve_temperature", schema = "activite", catalog = "activite")
-public class ReleveTemperatureEntity {
-    private UUID id;
+public class ReleveTemperatureEntity extends UuidEntity{
+
     private UUID idConditionReleve;
     private Object dateCreation;
     private Object dateModification;
@@ -19,18 +19,6 @@ public class ReleveTemperatureEntity {
     private String libelleTypeMesure;
     private BigInteger mesure;
 
-    @Id
-    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator",
-            parameters = {@org.hibernate.annotations.Parameter(name = "uuid_gen_strategy_class",
-                    value = "org.hibernate.id.uuid.CustomVersionOneStrategy")})
-    @Column(name = "id", nullable = false)
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
 
     @Basic
     @Column(name = "id_condition_releve", nullable = false)

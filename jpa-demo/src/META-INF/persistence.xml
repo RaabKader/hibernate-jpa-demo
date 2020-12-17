@@ -12,7 +12,7 @@
         <class>fr.dalkia.entity.DemandeIdBase</class>
         <class>fr.dalkia.entity.DemandeHistoIdBase</class>
         <class>fr.dalkia.entity.DmdAlarmeCauseIdBase</class>
-        <class>fr.dalkia.entity.DmdCanalBaseInt</class>
+        <class>fr.dalkia.entity.DmdCanalEntity</class>
         <class>fr.dalkia.entity.DmdContactIdBase</class>
         <class>fr.dalkia.entity.DmdDaCauseEntity</class>
         <class>fr.dalkia.entity.DmdDocumentIdBase</class>
@@ -21,7 +21,7 @@
         <class>fr.dalkia.entity.DmdMgtCauseEntity</class>
         <class>fr.dalkia.entity.DmdMotifIdBase</class>
         <class>fr.dalkia.entity.DmdSlaIdBase</class>
-        <class>fr.dalkia.entity.DmdStatutBaseInt</class>
+        <class>fr.dalkia.entity.DmdStatutEntity</class>
         <class>fr.dalkia.entity.DocumentIdBase</class>
         <class>fr.dalkia.entity.DocumentEmailIdBase</class>
         <class>fr.dalkia.entity.FormulaireSaisiEntity</class>
@@ -39,12 +39,12 @@
         <class>fr.dalkia.entity.OtPriseEnCompteIntervenantIdBase</class>
         <class>fr.dalkia.entity.OtUoEntity</class>
         <class>fr.dalkia.entity.ReleveTemperatureIdBase</class>
-        <class>fr.dalkia.entity.SyntheseBaseInt</class>
+        <class>fr.dalkia.entity.SyntheseEntity</class>
         <class>fr.dalkia.entity.TacheIdBase</class>
-        <class>fr.dalkia.entity.TypeContactBaseInt</class>
+        <class>fr.dalkia.entity.TypeContactEntity</class>
         <class>fr.dalkia.entity.TypeDemandeBaseInt</class>
         <class>fr.dalkia.entity.UtilisationDactechIdBase</class>
-        <class>fr.dalkia.entity.WoSigmaCscBaseInt</class>
+        <class>fr.dalkia.entity.WoSigmaCscEntity</class>
         <properties>
             <property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5432/postgres"/>
             <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>

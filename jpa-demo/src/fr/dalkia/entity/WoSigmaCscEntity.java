@@ -6,7 +6,7 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "wo_sigma_csc", schema = "activite", catalog = "activite")
-public class WoSigmaCscBaseInt extends IntEntity {
+public class WoSigmaCscEntity extends IntEntity {
 
     private UUID idOt;
     private UUID idDemande;
@@ -58,7 +58,7 @@ public class WoSigmaCscBaseInt extends IntEntity {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        WoSigmaCscBaseInt that = (WoSigmaCscBaseInt) o;
+        WoSigmaCscEntity that = (WoSigmaCscEntity) o;
         return Objects.equals(id, that.id) &&
                 Objects.equals(idOt, that.idOt) &&
                 Objects.equals(idDemande, that.idDemande) &&

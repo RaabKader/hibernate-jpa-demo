@@ -5,7 +5,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "synthese", schema = "activite", catalog = "activite")
-public class SyntheseBaseInt extends IntEntity {
+public class SyntheseEntity extends IntEntity {
 
     private Object dateDebut;
     private Object dateFin;
@@ -47,7 +47,7 @@ public class SyntheseBaseInt extends IntEntity {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        SyntheseBaseInt that = (SyntheseBaseInt) o;
+        SyntheseEntity that = (SyntheseEntity) o;
         return id == that.id &&
                 Objects.equals(dateDebut, that.dateDebut) &&
                 Objects.equals(dateFin, that.dateFin) &&

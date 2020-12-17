@@ -5,7 +5,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "type_contact", schema = "activite", catalog = "activite")
-public class TypeContactBaseInt extends IntEntity {
+public class TypeContactEntity extends IntEntity {
 
     private String code;
     private String description;
@@ -35,7 +35,7 @@ public class TypeContactBaseInt extends IntEntity {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        TypeContactBaseInt that = (TypeContactBaseInt) o;
+        TypeContactEntity that = (TypeContactEntity) o;
         return id == that.id &&
                 Objects.equals(code, that.code) &&
                 Objects.equals(description, that.description);

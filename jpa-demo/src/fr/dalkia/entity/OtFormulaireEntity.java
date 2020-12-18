@@ -10,6 +10,7 @@ import java.util.UUID;
 @Table(name = "ot_formulaire", schema = "activite", catalog = "activite")
 @IdClass(OtFormulaireEntityPK.class)
 public class OtFormulaireEntity {
+
     private UUID id;
     private UUID idOt;
     private UUID idFormulaire;

@@ -10,7 +10,6 @@ public class TypeContactEntity extends IntEntity {
     private String code;
     private String description;
 
-
     @Basic
     @Column(name = "code", nullable = false, length = -1)
     public String getCode() {

@@ -17,7 +17,7 @@ public class ConditionReleveEntity extends UuidEntity {
     private String valeurPluie;
     private String valeurVent;
     private String observations;
-    private CrEntity crByIdCr;
+    private CrEntity cr;
 
 
     @Basic
@@ -123,11 +123,11 @@ public class ConditionReleveEntity extends UuidEntity {
 
     @ManyToOne
     @JoinColumn(name = "id_cr", referencedColumnName = "id", nullable = false)
-    public CrEntity getCrByIdCr() {
-        return crByIdCr;
+    public CrEntity getCr() {
+        return cr;
     }
 
-    public void setCrByIdCr(CrEntity crByIdCr) {
-        this.crByIdCr = crByIdCr;
+    public void setCr(CrEntity cr) {
+        this.cr = cr;
     }
 }

@@ -11,6 +11,7 @@ import java.util.UUID;
 @Entity
 @Table(name = "demande_histo", schema = "activite", catalog = "activite")
 public class DemandeHistoEntity extends UuidEntity {
+
     private UUID id;
     private UUID idInstanceGmao;
     private String idDemandeGmao;

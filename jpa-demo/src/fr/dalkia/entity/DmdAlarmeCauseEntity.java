@@ -27,8 +27,8 @@ public class DmdAlarmeCauseEntity {
     private String partenaireNatureLabel;
     private String causeDescription;
     private String impact;
-    private DemandeEntity demandeByIdDemande;
-    private DemandeEntity demandeByIdDemande_0;
+    private DemandeEntity demande;
+
 
     @Id
     @GeneratedValue(generator = "UUID")
@@ -230,21 +230,12 @@ public class DmdAlarmeCauseEntity {
 
     @OneToOne
     @JoinColumn(name = "id_demande", referencedColumnName = "id", nullable = false)
-    public DemandeEntity getDemandeByIdDemande() {
-        return demandeByIdDemande;
+    public DemandeEntity getDemande() {
+        return demande;
     }
 
-    public void setDemandeByIdDemande(DemandeEntity demandeByIdDemande) {
-        this.demandeByIdDemande = demandeByIdDemande;
+    public void setDemande(DemandeEntity demande) {
+        this.demande = demande;
     }
 
-    @OneToOne
-    @JoinColumn(name = "id_demande", referencedColumnName = "id", nullable = false)
-    public DemandeEntity getDemandeByIdDemande_0() {
-        return demandeByIdDemande_0;
-    }
-
-    public void setDemandeByIdDemande_0(DemandeEntity demandeByIdDemande_0) {
-        this.demandeByIdDemande_0 = demandeByIdDemande_0;
-    }
 }

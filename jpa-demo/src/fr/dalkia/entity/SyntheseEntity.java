@@ -1,34 +1,38 @@
 package fr.dalkia.entity;
 
-import javax.persistence.*;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import java.time.ZonedDateTime;
 import java.util.Objects;
 
 @Entity
 @Table(name = "synthese", schema = "activite", catalog = "activite")
 public class SyntheseEntity extends IntEntity {
 
-    private Object dateDebut;
-    private Object dateFin;
+    private ZonedDateTime dateDebut;
+    private ZonedDateTime dateFin;
     private String duree;
 
 
     @Basic
     @Column(name = "date_debut", nullable = true)
-    public Object getDateDebut() {
+    public ZonedDateTime getDateDebut() {
         return dateDebut;
     }
 
-    public void setDateDebut(Object dateDebut) {
+    public void setDateDebut(ZonedDateTime dateDebut) {
         this.dateDebut = dateDebut;
     }
 
     @Basic
     @Column(name = "date_fin", nullable = true)
-    public Object getDateFin() {
+    public ZonedDateTime getDateFin() {
         return dateFin;
     }
 
-    public void setDateFin(Object dateFin) {
+    public void setDateFin(ZonedDateTime dateFin) {
         this.dateFin = dateFin;
     }
 

@@ -1,8 +1,10 @@
 package fr.dalkia.entity;
 
-import org.hibernate.annotations.GenericGenerator;
-
-import javax.persistence.*;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import java.time.ZonedDateTime;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -11,8 +13,8 @@ import java.util.UUID;
 public class UtilisationDactechEntity extends UuidEntity{
 
     private UUID idIntervenant;
-    private Object date;
-    private Object dateCreation;
+    private ZonedDateTime date;
+    private ZonedDateTime dateCreation;
     private String deviceOsVersion;
     private String deviceAppVersion;
     private String deviceManufacturer;
@@ -30,21 +32,21 @@ public class UtilisationDactechEntity extends UuidEntity{
 
     @Basic
     @Column(name = "date", nullable = false)
-    public Object getDate() {
+    public ZonedDateTime getDate() {
         return date;
     }
 
-    public void setDate(Object date) {
+    public void setDate(ZonedDateTime date) {
         this.date = date;
     }
 
     @Basic
     @Column(name = "date_creation", nullable = false)
-    public Object getDateCreation() {
+    public ZonedDateTime getDateCreation() {
         return dateCreation;
     }
 
-    public void setDateCreation(Object dateCreation) {
+    public void setDateCreation(ZonedDateTime dateCreation) {
         this.dateCreation = dateCreation;
     }
 

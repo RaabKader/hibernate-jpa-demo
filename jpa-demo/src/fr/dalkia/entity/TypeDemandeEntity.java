@@ -1,11 +1,14 @@
 package fr.dalkia.entity;
 
-import javax.persistence.*;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.util.Objects;
 
 @Entity
 @Table(name = "type_demande", schema = "activite", catalog = "activite")
-public class TypeDemandeBaseInt extends IntEntity {
+public class TypeDemandeEntity extends IntEntity {
 
     private String code;
     private String description;
@@ -34,7 +37,7 @@ public class TypeDemandeBaseInt extends IntEntity {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        TypeDemandeBaseInt that = (TypeDemandeBaseInt) o;
+        TypeDemandeEntity that = (TypeDemandeEntity) o;
         return id == that.id &&
                 Objects.equals(code, that.code) &&
                 Objects.equals(description, that.description);

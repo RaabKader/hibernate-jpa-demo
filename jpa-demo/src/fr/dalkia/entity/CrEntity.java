@@ -31,9 +31,9 @@ public class CrEntity extends UuidEntity {
     private boolean syntheseTempsModifie;
     private String idCrGmao;
     private String motifCrPartiel;
-    private Collection<ConditionReleveEntity> conditionRelevesById;
-    private OtEntity otByIdOt;
-    private Collection<CrDocumentEntity> crDocumentsById;
+    private Collection<ConditionReleveEntity> conditionReleves;
+    private OtEntity ot;
+    private Collection<CrDocumentEntity> crDocuments;
 
 
     @Basic
@@ -247,31 +247,31 @@ public class CrEntity extends UuidEntity {
     }
 
     @OneToMany(mappedBy = "crByIdCr")
-    public Collection<ConditionReleveEntity> getConditionRelevesById() {
-        return conditionRelevesById;
+    public Collection<ConditionReleveEntity> getConditionReleves() {
+        return conditionReleves;
     }
 
-    public void setConditionRelevesById(Collection<ConditionReleveEntity> conditionRelevesById) {
-        this.conditionRelevesById = conditionRelevesById;
+    public void setConditionReleves(Collection<ConditionReleveEntity> conditionReleves) {
+        this.conditionReleves = conditionReleves;
     }
 
     @ManyToOne
     @JoinColumn(name = "id_ot", referencedColumnName = "id")
-    public OtEntity getOtByIdOt() {
-        return otByIdOt;
+    public OtEntity getOt() {
+        return ot;
     }
 
-    public void setOtByIdOt(OtEntity otByIdOt) {
-        this.otByIdOt = otByIdOt;
+    public void setOt(OtEntity ot) {
+        this.ot = ot;
     }
 
     @OneToMany(mappedBy = "crByIdCr")
-    public Collection<CrDocumentEntity> getCrDocumentsById() {
-        return crDocumentsById;
+    public Collection<CrDocumentEntity> getCrDocuments() {
+        return crDocuments;
     }
 
-    public void setCrDocumentsById(Collection<CrDocumentEntity> crDocumentsById) {
-        this.crDocumentsById = crDocumentsById;
+    public void setCrDocuments(Collection<CrDocumentEntity> crDocuments) {
+        this.crDocuments = crDocuments;
     }
 
     @Override

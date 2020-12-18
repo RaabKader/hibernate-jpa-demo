@@ -1,10 +1,7 @@
 package fr.dalkia.entity;
 
-import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
 import java.util.Objects;
-import java.util.UUID;
 
 @Entity
 @Table(name = "dmd_sla", schema = "activite", catalog = "activite")
@@ -13,8 +10,8 @@ public class DmdSlaEntity extends UuidEntity{
     private String codeGmao;
     private String valeur;
     private String delaiResolution;
-    private DemandeEntity demandeByIdDemande;
-    
+    private DemandeEntity demande;
+
     @Basic
     @Column(name = "code_gmao", nullable = true, length = -1)
     public String getCodeGmao() {
@@ -63,11 +60,11 @@ public class DmdSlaEntity extends UuidEntity{
 
     @ManyToOne
     @JoinColumn(name = "id_demande", referencedColumnName = "id")
-    public DemandeEntity getDemandeByIdDemande() {
-        return demandeByIdDemande;
+    public DemandeEntity getDemande() {
+        return demande;
     }
 
-    public void setDemandeByIdDemande(DemandeEntity demandeByIdDemande) {
-        this.demandeByIdDemande = demandeByIdDemande;
+    public void setDemande(DemandeEntity demande) {
+        this.demande = demande;
     }
 }

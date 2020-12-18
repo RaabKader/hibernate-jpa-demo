@@ -1,7 +1,5 @@
 package fr.dalkia.entity;
 
-import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
 import java.util.Objects;
 import java.util.UUID;
@@ -10,11 +8,11 @@ import java.util.UUID;
 @Table(name = "ot_histo", schema = "activite", catalog = "activite")
 public class OtHistoEntity extends UuidEntity{
 
-    private Object dateVersion;
+    private UUID dateVersion;
     private int numeroVersion;
     private String idGmao;
     private String idInstanceGmao;
-    private Object dateImport;
+    private UUID dateImport;
     private String numeroOt;
     private String typeActivite;
     private String periodiciteCode;
@@ -25,32 +23,32 @@ public class OtHistoEntity extends UuidEntity{
     private String conditionSla;
     private Boolean existanceSla;
     private boolean multiIntervenant;
-    private Object dateModification;
+    private UUID dateModification;
     private String idOtParentGmao;
-    private Object previsionDateDebut;
-    private Object previsionDateFin;
+    private UUID previsionDateDebut;
+    private UUID previsionDateFin;
     private String previsionDuree;
-    private Object planDateDebut;
-    private Object planDateFin;
+    private UUID planDateDebut;
+    private UUID planDateFin;
     private String idAuteurGmao;
     private Boolean idAuteurOtDlk;
     private Boolean estRdvClient;
     private Boolean estControleReglementaire;
     private String statutOt;
-    private Object statutDateValidationMop;
-    private Object statutDateClotureIntervenant;
-    private Object statutDateCreation;
+    private UUID statutDateValidationMop;
+    private UUID statutDateClotureIntervenant;
+    private UUID statutDateCreation;
     private String origine;
-    private Object dateEnvoiVersGmao;
-    private Object dateMajVersGmao;
+    private UUID dateEnvoiVersGmao;
+    private UUID dateMajVersGmao;
     private Boolean statutRealisationPartiel;
-    private Object idOtParentDlk;
+    private UUID idOtParentDlk;
     private UUID idDemande;
     private String numeroOtParent;
     private String canalModification;
     private String typeActiviteSigma;
-    private Object datePlafond;
-    private Object datePlancher;
+    private UUID datePlafond;
+    private UUID datePlancher;
     private String numeroOtCsc;
     private String typologie;
     private String sousTypologie;
@@ -58,17 +56,17 @@ public class OtHistoEntity extends UuidEntity{
     private String numeroFicheMp;
     private String numeroGamme;
     private String numeroArret;
-    private Object dateEnvoiVersPivot;
-    private OtEntity otByIdOt;
+    private UUID dateEnvoiVersPivot;
+    private OtEntity ot;
 
 
     @Basic
     @Column(name = "date_version", nullable = false)
-    public Object getDateVersion() {
+    public UUID getDateVersion() {
         return dateVersion;
     }
 
-    public void setDateVersion(Object dateVersion) {
+    public void setDateVersion(UUID dateVersion) {
         this.dateVersion = dateVersion;
     }
 
@@ -104,11 +102,11 @@ public class OtHistoEntity extends UuidEntity{
 
     @Basic
     @Column(name = "date_import", nullable = false)
-    public Object getDateImport() {
+    public UUID getDateImport() {
         return dateImport;
     }
 
-    public void setDateImport(Object dateImport) {
+    public void setDateImport(UUID dateImport) {
         this.dateImport = dateImport;
     }
 
@@ -214,11 +212,11 @@ public class OtHistoEntity extends UuidEntity{
 
     @Basic
     @Column(name = "date_modification", nullable = true)
-    public Object getDateModification() {
+    public UUID getDateModification() {
         return dateModification;
     }
 
-    public void setDateModification(Object dateModification) {
+    public void setDateModification(UUID dateModification) {
         this.dateModification = dateModification;
     }
 
@@ -234,21 +232,21 @@ public class OtHistoEntity extends UuidEntity{
 
     @Basic
     @Column(name = "prevision_date_debut", nullable = true)
-    public Object getPrevisionDateDebut() {
+    public UUID getPrevisionDateDebut() {
         return previsionDateDebut;
     }
 
-    public void setPrevisionDateDebut(Object previsionDateDebut) {
+    public void setPrevisionDateDebut(UUID previsionDateDebut) {
         this.previsionDateDebut = previsionDateDebut;
     }
 
     @Basic
     @Column(name = "prevision_date_fin", nullable = true)
-    public Object getPrevisionDateFin() {
+    public UUID getPrevisionDateFin() {
         return previsionDateFin;
     }
 
-    public void setPrevisionDateFin(Object previsionDateFin) {
+    public void setPrevisionDateFin(UUID previsionDateFin) {
         this.previsionDateFin = previsionDateFin;
     }
 
@@ -264,21 +262,21 @@ public class OtHistoEntity extends UuidEntity{
 
     @Basic
     @Column(name = "plan_date_debut", nullable = true)
-    public Object getPlanDateDebut() {
+    public UUID getPlanDateDebut() {
         return planDateDebut;
     }
 
-    public void setPlanDateDebut(Object planDateDebut) {
+    public void setPlanDateDebut(UUID planDateDebut) {
         this.planDateDebut = planDateDebut;
     }
 
     @Basic
     @Column(name = "plan_date_fin", nullable = true)
-    public Object getPlanDateFin() {
+    public UUID getPlanDateFin() {
         return planDateFin;
     }
 
-    public void setPlanDateFin(Object planDateFin) {
+    public void setPlanDateFin(UUID planDateFin) {
         this.planDateFin = planDateFin;
     }
 
@@ -334,31 +332,31 @@ public class OtHistoEntity extends UuidEntity{
 
     @Basic
     @Column(name = "statut_date_validation_mop", nullable = true)
-    public Object getStatutDateValidationMop() {
+    public UUID getStatutDateValidationMop() {
         return statutDateValidationMop;
     }
 
-    public void setStatutDateValidationMop(Object statutDateValidationMop) {
+    public void setStatutDateValidationMop(UUID statutDateValidationMop) {
         this.statutDateValidationMop = statutDateValidationMop;
     }
 
     @Basic
     @Column(name = "statut_date_cloture_intervenant", nullable = true)
-    public Object getStatutDateClotureIntervenant() {
+    public UUID getStatutDateClotureIntervenant() {
         return statutDateClotureIntervenant;
     }
 
-    public void setStatutDateClotureIntervenant(Object statutDateClotureIntervenant) {
+    public void setStatutDateClotureIntervenant(UUID statutDateClotureIntervenant) {
         this.statutDateClotureIntervenant = statutDateClotureIntervenant;
     }
 
     @Basic
     @Column(name = "statut_date_creation", nullable = true)
-    public Object getStatutDateCreation() {
+    public UUID getStatutDateCreation() {
         return statutDateCreation;
     }
 
-    public void setStatutDateCreation(Object statutDateCreation) {
+    public void setStatutDateCreation(UUID statutDateCreation) {
         this.statutDateCreation = statutDateCreation;
     }
 
@@ -374,21 +372,21 @@ public class OtHistoEntity extends UuidEntity{
 
     @Basic
     @Column(name = "date_envoi_vers_gmao", nullable = true)
-    public Object getDateEnvoiVersGmao() {
+    public UUID getDateEnvoiVersGmao() {
         return dateEnvoiVersGmao;
     }
 
-    public void setDateEnvoiVersGmao(Object dateEnvoiVersGmao) {
+    public void setDateEnvoiVersGmao(UUID dateEnvoiVersGmao) {
         this.dateEnvoiVersGmao = dateEnvoiVersGmao;
     }
 
     @Basic
     @Column(name = "date_maj_vers_gmao", nullable = true)
-    public Object getDateMajVersGmao() {
+    public UUID getDateMajVersGmao() {
         return dateMajVersGmao;
     }
 
-    public void setDateMajVersGmao(Object dateMajVersGmao) {
+    public void setDateMajVersGmao(UUID dateMajVersGmao) {
         this.dateMajVersGmao = dateMajVersGmao;
     }
 
@@ -404,11 +402,11 @@ public class OtHistoEntity extends UuidEntity{
 
     @Basic
     @Column(name = "id_ot_parent_dlk", nullable = true)
-    public Object getIdOtParentDlk() {
+    public UUID getIdOtParentDlk() {
         return idOtParentDlk;
     }
 
-    public void setIdOtParentDlk(Object idOtParentDlk) {
+    public void setIdOtParentDlk(UUID idOtParentDlk) {
         this.idOtParentDlk = idOtParentDlk;
     }
 
@@ -454,21 +452,21 @@ public class OtHistoEntity extends UuidEntity{
 
     @Basic
     @Column(name = "date_plafond", nullable = true)
-    public Object getDatePlafond() {
+    public UUID getDatePlafond() {
         return datePlafond;
     }
 
-    public void setDatePlafond(Object datePlafond) {
+    public void setDatePlafond(UUID datePlafond) {
         this.datePlafond = datePlafond;
     }
 
     @Basic
     @Column(name = "date_plancher", nullable = true)
-    public Object getDatePlancher() {
+    public UUID getDatePlancher() {
         return datePlancher;
     }
 
-    public void setDatePlancher(Object datePlancher) {
+    public void setDatePlancher(UUID datePlancher) {
         this.datePlancher = datePlancher;
     }
 
@@ -544,11 +542,11 @@ public class OtHistoEntity extends UuidEntity{
 
     @Basic
     @Column(name = "date_envoi_vers_pivot", nullable = true)
-    public Object getDateEnvoiVersPivot() {
+    public UUID getDateEnvoiVersPivot() {
         return dateEnvoiVersPivot;
     }
 
-    public void setDateEnvoiVersPivot(Object dateEnvoiVersPivot) {
+    public void setDateEnvoiVersPivot(UUID dateEnvoiVersPivot) {
         this.dateEnvoiVersPivot = dateEnvoiVersPivot;
     }
 
@@ -616,11 +614,11 @@ public class OtHistoEntity extends UuidEntity{
 
     @ManyToOne
     @JoinColumn(name = "id_ot", referencedColumnName = "id", nullable = false)
-    public OtEntity getOtByIdOt() {
-        return otByIdOt;
+    public OtEntity getOt() {
+        return ot;
     }
 
-    public void setOtByIdOt(OtEntity otByIdOt) {
-        this.otByIdOt = otByIdOt;
+    public void setOt(OtEntity ot) {
+        this.ot = ot;
     }
 }

@@ -42,7 +42,7 @@
         <class>fr.dalkia.entity.SyntheseEntity</class>
         <class>fr.dalkia.entity.TacheIdBase</class>
         <class>fr.dalkia.entity.TypeContactEntity</class>
-        <class>fr.dalkia.entity.TypeDemandeBaseInt</class>
+        <class>fr.dalkia.entity.TypeDemandeEntity</class>
         <class>fr.dalkia.entity.UtilisationDactechIdBase</class>
         <class>fr.dalkia.entity.WoSigmaCscEntity</class>
         <properties>

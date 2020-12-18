@@ -1,7 +1,5 @@
 package fr.dalkia.entity;
 
-import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
 import java.util.Objects;
 import java.util.UUID;
@@ -10,10 +8,11 @@ import java.util.UUID;
 @Table(name = "ot_equipement", schema = "activite", catalog = "activite")
 @IdClass(OtEquipementEntityPK.class)
 public class OtEquipementEntity {
+
     private UUID id;
     private UUID idOt;
     private UUID idEquipement;
-    private OtEntity otByIdOt;
+    private OtEntity ot;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -62,11 +61,11 @@ public class OtEquipementEntity {
 
     @ManyToOne
     @JoinColumn(name = "id_ot", referencedColumnName = "id", nullable = false)
-    public OtEntity getOtByIdOt() {
-        return otByIdOt;
+    public OtEntity getOt() {
+        return ot;
     }
 
-    public void setOtByIdOt(OtEntity otByIdOt) {
-        this.otByIdOt = otByIdOt;
+    public void setOt(OtEntity ot) {
+        this.ot = ot;
     }
 }

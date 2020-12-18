@@ -1,9 +1,11 @@
 package fr.dalkia.entity;
 
-import org.hibernate.annotations.GenericGenerator;
-
-import javax.persistence.*;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.math.BigInteger;
+import java.time.ZonedDateTime;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -12,8 +14,8 @@ import java.util.UUID;
 public class ReleveTemperatureEntity extends UuidEntity{
 
     private UUID idConditionReleve;
-    private Object dateCreation;
-    private Object dateModification;
+    private ZonedDateTime dateCreation;
+    private ZonedDateTime dateModification;
     private String mesureLocalisation;
     private String typeMesure;
     private String libelleTypeMesure;
@@ -32,21 +34,21 @@ public class ReleveTemperatureEntity extends UuidEntity{
 
     @Basic
     @Column(name = "date_creation", nullable = false)
-    public Object getDateCreation() {
+    public ZonedDateTime getDateCreation() {
         return dateCreation;
     }
 
-    public void setDateCreation(Object dateCreation) {
+    public void setDateCreation(ZonedDateTime dateCreation) {
         this.dateCreation = dateCreation;
     }
 
     @Basic
     @Column(name = "date_modification", nullable = true)
-    public Object getDateModification() {
+    public ZonedDateTime getDateModification() {
         return dateModification;
     }
 
-    public void setDateModification(Object dateModification) {
+    public void setDateModification(ZonedDateTime dateModification) {
         this.dateModification = dateModification;
     }
 

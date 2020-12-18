@@ -15,7 +15,7 @@ public class CrDocumentEntity extends UuidEntity {
     private ZonedDateTime dateCreation;
     private String categorie;
     private Integer size;
-    private CrEntity crByIdCr;
+    private CrEntity cr;
 
     @Basic
     @Column(name = "id_document", nullable = true)
@@ -98,11 +98,11 @@ public class CrDocumentEntity extends UuidEntity {
 
     @ManyToOne
     @JoinColumn(name = "id_cr", referencedColumnName = "id")
-    public CrEntity getCrByIdCr() {
-        return crByIdCr;
+    public CrEntity getCr() {
+        return cr;
     }
 
-    public void setCrByIdCr(CrEntity crByIdCr) {
-        this.crByIdCr = crByIdCr;
+    public void setCr(CrEntity cr) {
+        this.cr = cr;
     }
 }

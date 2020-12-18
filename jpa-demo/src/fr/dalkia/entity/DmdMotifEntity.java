@@ -16,7 +16,7 @@ public class DmdMotifEntity extends UuidEntity{
     private Boolean motifEstSla;
     private Boolean sousMotifEstSla;
     private UUID idMotif;
-    private DemandeEntity demandeByIdDemande;
+    private DemandeEntity demande;
 
 
     @Basic
@@ -122,11 +122,11 @@ public class DmdMotifEntity extends UuidEntity{
 
     @ManyToOne
     @JoinColumn(name = "id_demande", referencedColumnName = "id", nullable = false)
-    public DemandeEntity getDemandeByIdDemande() {
-        return demandeByIdDemande;
+    public DemandeEntity getDemande() {
+        return demande;
     }
 
-    public void setDemandeByIdDemande(DemandeEntity demandeByIdDemande) {
-        this.demandeByIdDemande = demandeByIdDemande;
+    public void setDemande(DemandeEntity demande) {
+        this.demande = demande;
     }
 }

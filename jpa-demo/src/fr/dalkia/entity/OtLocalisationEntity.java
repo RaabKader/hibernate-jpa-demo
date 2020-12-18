@@ -1,7 +1,5 @@
 package fr.dalkia.entity;
 
-import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
 import java.util.Objects;
 import java.util.UUID;
@@ -10,27 +8,27 @@ import java.util.UUID;
 @Table(name = "ot_localisation", schema = "activite", catalog = "activite")
 public class OtLocalisationEntity extends UuidEntity{
 
-    private Object idLocalisation;
-    private Object idSite;
-    private OtEntity otByIdOt;
+    private UUID idLocalisation;
+    private UUID idSite;
+    private OtEntity ot;
 
     @Basic
     @Column(name = "id_localisation", nullable = true)
-    public Object getIdLocalisation() {
+    public UUID getIdLocalisation() {
         return idLocalisation;
     }
 
-    public void setIdLocalisation(Object idLocalisation) {
+    public void setIdLocalisation(UUID idLocalisation) {
         this.idLocalisation = idLocalisation;
     }
 
     @Basic
     @Column(name = "id_site", nullable = true)
-    public Object getIdSite() {
+    public UUID getIdSite() {
         return idSite;
     }
 
-    public void setIdSite(Object idSite) {
+    public void setIdSite(UUID idSite) {
         this.idSite = idSite;
     }
 
@@ -51,11 +49,11 @@ public class OtLocalisationEntity extends UuidEntity{
 
     @ManyToOne
     @JoinColumn(name = "id_ot", referencedColumnName = "id")
-    public OtEntity getOtByIdOt() {
-        return otByIdOt;
+    public OtEntity getOt() {
+        return ot;
     }
 
-    public void setOtByIdOt(OtEntity otByIdOt) {
-        this.otByIdOt = otByIdOt;
+    public void setOt(OtEntity ot) {
+        this.ot = ot;
     }
 }

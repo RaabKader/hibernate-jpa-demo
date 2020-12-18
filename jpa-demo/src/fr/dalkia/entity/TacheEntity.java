@@ -1,7 +1,5 @@
 package fr.dalkia.entity;
 
-import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
 import java.util.Objects;
 import java.util.UUID;
@@ -17,16 +15,16 @@ public class TacheEntity extends UuidEntity{
     private String commentaireMop;
     private String commentaireClient;
     private String statutTache;
-    private Object dateValidation;
-    private Object realiseDateDebut;
-    private Object realiseDateFin;
+    private UUID dateValidation;
+    private UUID realiseDateDebut;
+    private UUID realiseDateFin;
     private Integer realiseDuree;
     private String idIntervenant;
     private String idFormulaire;
     private String idLocalisation;
     private String idTacheGmao;
     private String commentaireInterne;
-    private OtEntity otByIdOt;
+    private OtEntity ot;
 
 
     @Basic
@@ -101,31 +99,31 @@ public class TacheEntity extends UuidEntity{
 
     @Basic
     @Column(name = "date_validation", nullable = true)
-    public Object getDateValidation() {
+    public UUID getDateValidation() {
         return dateValidation;
     }
 
-    public void setDateValidation(Object dateValidation) {
+    public void setDateValidation(UUID dateValidation) {
         this.dateValidation = dateValidation;
     }
 
     @Basic
     @Column(name = "realise_date_debut", nullable = true)
-    public Object getRealiseDateDebut() {
+    public UUID getRealiseDateDebut() {
         return realiseDateDebut;
     }
 
-    public void setRealiseDateDebut(Object realiseDateDebut) {
+    public void setRealiseDateDebut(UUID realiseDateDebut) {
         this.realiseDateDebut = realiseDateDebut;
     }
 
     @Basic
     @Column(name = "realise_date_fin", nullable = true)
-    public Object getRealiseDateFin() {
+    public UUID getRealiseDateFin() {
         return realiseDateFin;
     }
 
-    public void setRealiseDateFin(Object realiseDateFin) {
+    public void setRealiseDateFin(UUID realiseDateFin) {
         this.realiseDateFin = realiseDateFin;
     }
 
@@ -220,11 +218,11 @@ public class TacheEntity extends UuidEntity{
 
     @ManyToOne
     @JoinColumn(name = "id_ot", referencedColumnName = "id")
-    public OtEntity getOtByIdOt() {
-        return otByIdOt;
+    public OtEntity getOt() {
+        return ot;
     }
 
-    public void setOtByIdOt(OtEntity otByIdOt) {
-        this.otByIdOt = otByIdOt;
+    public void setOt(OtEntity ot) {
+        this.ot = ot;
     }
 }

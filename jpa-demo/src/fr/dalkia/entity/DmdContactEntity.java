@@ -1,7 +1,5 @@
 package fr.dalkia.entity;
 
-import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
 import java.util.Objects;
 import java.util.UUID;
@@ -26,7 +24,7 @@ public class DmdContactEntity extends UuidEntity{
     private Integer idTypeContact;
     private UUID idDemandeur;
     private String fonction;
-    private DemandeEntity demandeByIdDemande;
+    private DemandeEntity demande;
 
 
     @Basic
@@ -220,11 +218,11 @@ public class DmdContactEntity extends UuidEntity{
 
     @ManyToOne
     @JoinColumn(name = "id_demande", referencedColumnName = "id")
-    public DemandeEntity getDemandeByIdDemande() {
-        return demandeByIdDemande;
+    public DemandeEntity getDemande() {
+        return demande;
     }
 
-    public void setDemandeByIdDemande(DemandeEntity demandeByIdDemande) {
-        this.demandeByIdDemande = demandeByIdDemande;
+    public void setDemande(DemandeEntity demande) {
+        this.demande = demande;
     }
 }

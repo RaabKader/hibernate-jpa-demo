@@ -55,7 +55,7 @@ public class OtEntity extends UuidEntity{
     private String numeroGamme;
     private String numeroArret;
     private ZonedDateTime dateEnvoiVersPivot;
-    private DemandeEntity demandeByIdDemande;
+    private DemandeEntity demande;
 
     @Basic
     @Column(name = "id_gmao", nullable = true, length = -1)
@@ -579,10 +579,10 @@ public class OtEntity extends UuidEntity{
     @ManyToOne
     @JoinColumn(name = "id_demande", referencedColumnName = "id")
     public DemandeEntity getDemandeByIdDemande() {
-        return demandeByIdDemande;
+        return demande;
     }
 
     public void setDemandeByIdDemande(DemandeEntity demandeByIdDemande) {
-        this.demandeByIdDemande = demandeByIdDemande;
+        this.demande = demandeByIdDemande;
     }
 }

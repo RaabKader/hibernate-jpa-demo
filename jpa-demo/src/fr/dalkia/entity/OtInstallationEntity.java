@@ -8,10 +8,11 @@ import java.util.UUID;
 @Table(name = "ot_installation", schema = "activite", catalog = "activite")
 @IdClass(OtInstallationEntityPK.class)
 public class OtInstallationEntity {
+
     private UUID id;
     private UUID idOt;
     private UUID idInstallation;
-    private OtEntity otByIdOt;
+    private OtEntity ot;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -60,11 +61,11 @@ public class OtInstallationEntity {
 
     @ManyToOne
     @JoinColumn(name = "id_ot", referencedColumnName = "id", nullable = false)
-    public OtEntity getOtByIdOt() {
-        return otByIdOt;
+    public OtEntity getOt() {
+        return ot;
     }
 
-    public void setOtByIdOt(OtEntity otByIdOt) {
-        this.otByIdOt = otByIdOt;
+    public void setOt(OtEntity ot) {
+        this.ot = ot;
     }
 }

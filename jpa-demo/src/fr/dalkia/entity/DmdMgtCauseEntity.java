@@ -7,6 +7,7 @@ import java.util.UUID;
 @Entity
 @Table(name = "dmd_mgt_cause", schema = "activite", catalog = "activite")
 public class DmdMgtCauseEntity {
+
     private UUID idDemande;
     private String refCauseCode;
     private String refCauseLabel;
@@ -25,8 +26,7 @@ public class DmdMgtCauseEntity {
     private String causeDescription;
     private String impact;
     private UUID id;
-    private DemandeEntity demandeByIdDemande;
-    private DemandeEntity demandeByIdDemande_0;
+    private DemandeEntity demande;
 
     @Id
     @Column(name = "id_demande", nullable = false)
@@ -240,21 +240,12 @@ public class DmdMgtCauseEntity {
 
     @OneToOne
     @JoinColumn(name = "id_demande", referencedColumnName = "id", nullable = false)
-    public DemandeEntity getDemandeByIdDemande() {
-        return demandeByIdDemande;
+    public DemandeEntity getDemande() {
+        return demande;
     }
 
-    public void setDemandeByIdDemande(DemandeEntity demandeByIdDemande) {
-        this.demandeByIdDemande = demandeByIdDemande;
+    public void setDemande(DemandeEntity demande) {
+        this.demande = demande;
     }
 
-    @OneToOne
-    @JoinColumn(name = "id_demande", referencedColumnName = "id", nullable = false)
-    public DemandeEntity getDemandeByIdDemande_0() {
-        return demandeByIdDemande_0;
-    }
-
-    public void setDemandeByIdDemande_0(DemandeEntity demandeByIdDemande_0) {
-        this.demandeByIdDemande_0 = demandeByIdDemande_0;
-    }
 }

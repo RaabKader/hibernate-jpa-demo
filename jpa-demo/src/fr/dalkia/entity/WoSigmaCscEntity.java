@@ -13,7 +13,6 @@ public class WoSigmaCscEntity extends IntEntity {
     private UUID idSia;
     private Integer cascadePosition;
 
-
     @Basic
     @Column(name = "id_ot", nullable = false)
     public UUID getIdOt() {

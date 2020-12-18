@@ -1,7 +1,5 @@
 package fr.dalkia.entity;
 
-import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
 import java.util.Objects;
 import java.util.UUID;
@@ -11,8 +9,7 @@ import java.util.UUID;
 public class DmdEquipementEntity extends UuidEntity{
 
     private UUID idEquipement;
-    private DemandeEntity demandeByIdDemande;
-    private DemandeEntity demandeByIdDemande_0;
+    private DemandeEntity demande;
 
 
     @Basic
@@ -41,21 +38,12 @@ public class DmdEquipementEntity extends UuidEntity{
 
     @ManyToOne
     @JoinColumn(name = "id_demande", referencedColumnName = "id", nullable = false)
-    public DemandeEntity getDemandeByIdDemande() {
-        return demandeByIdDemande;
+    public DemandeEntity getDemande() {
+        return demande;
     }
 
-    public void setDemandeByIdDemande(DemandeEntity demandeByIdDemande) {
-        this.demandeByIdDemande = demandeByIdDemande;
+    public void setDemande(DemandeEntity demande) {
+        this.demande = demande;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "id_demande", referencedColumnName = "id", nullable = false)
-    public DemandeEntity getDemandeByIdDemande_0() {
-        return demandeByIdDemande_0;
-    }
-
-    public void setDemandeByIdDemande_0(DemandeEntity demandeByIdDemande_0) {
-        this.demandeByIdDemande_0 = demandeByIdDemande_0;
-    }
 }

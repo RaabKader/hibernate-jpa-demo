@@ -1,7 +1,5 @@
 package fr.dalkia.entity;
 
-import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
 import java.util.Objects;
 import java.util.UUID;
@@ -13,17 +11,17 @@ public class OtIntervenantEntity extends UuidEntity{
     private UUID idIntervenant;
     private Boolean isPrincipal;
     private String matricule;
-    private Object dateDebutPlanifiee;
-    private Object dateFinPlanifiee;
-    private Object dateCreation;
-    private Object dateAffectation;
+    private UUID dateDebutPlanifiee;
+    private UUID dateFinPlanifiee;
+    private UUID dateCreation;
+    private UUID dateAffectation;
     private String corpsDeMetier;
     private String idGmao;
     private String origine;
     private String canalModification;
     private String typeAffectation;
     private String statutAffectation;
-    private OtEntity otByIdOt;
+    private OtEntity ot;
 
 
     @Basic
@@ -58,41 +56,41 @@ public class OtIntervenantEntity extends UuidEntity{
 
     @Basic
     @Column(name = "date_debut_planifiee", nullable = true)
-    public Object getDateDebutPlanifiee() {
+    public UUID getDateDebutPlanifiee() {
         return dateDebutPlanifiee;
     }
 
-    public void setDateDebutPlanifiee(Object dateDebutPlanifiee) {
+    public void setDateDebutPlanifiee(UUID dateDebutPlanifiee) {
         this.dateDebutPlanifiee = dateDebutPlanifiee;
     }
 
     @Basic
     @Column(name = "date_fin_planifiee", nullable = true)
-    public Object getDateFinPlanifiee() {
+    public UUID getDateFinPlanifiee() {
         return dateFinPlanifiee;
     }
 
-    public void setDateFinPlanifiee(Object dateFinPlanifiee) {
+    public void setDateFinPlanifiee(UUID dateFinPlanifiee) {
         this.dateFinPlanifiee = dateFinPlanifiee;
     }
 
     @Basic
     @Column(name = "date_creation", nullable = true)
-    public Object getDateCreation() {
+    public UUID getDateCreation() {
         return dateCreation;
     }
 
-    public void setDateCreation(Object dateCreation) {
+    public void setDateCreation(UUID dateCreation) {
         this.dateCreation = dateCreation;
     }
 
     @Basic
     @Column(name = "date_affectation", nullable = true)
-    public Object getDateAffectation() {
+    public UUID getDateAffectation() {
         return dateAffectation;
     }
 
-    public void setDateAffectation(Object dateAffectation) {
+    public void setDateAffectation(UUID dateAffectation) {
         this.dateAffectation = dateAffectation;
     }
 
@@ -184,11 +182,11 @@ public class OtIntervenantEntity extends UuidEntity{
 
     @ManyToOne
     @JoinColumn(name = "id_ot", referencedColumnName = "id")
-    public OtEntity getOtByIdOt() {
-        return otByIdOt;
+    public OtEntity getOt() {
+        return ot;
     }
 
-    public void setOtByIdOt(OtEntity otByIdOt) {
-        this.otByIdOt = otByIdOt;
+    public void setOt(OtEntity ot) {
+        this.ot = ot;
     }
 }

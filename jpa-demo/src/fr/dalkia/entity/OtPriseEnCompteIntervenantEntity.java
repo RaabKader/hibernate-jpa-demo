@@ -1,8 +1,7 @@
 package fr.dalkia.entity;
 
-import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
+import java.time.ZonedDateTime;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -10,22 +9,22 @@ import java.util.UUID;
 @Table(name = "ot_prise_en_compte_intervenant", schema = "activite", catalog = "activite")
 public class OtPriseEnCompteIntervenantEntity extends UuidEntity{
 
-    private Object idIntervenant;
+    private UUID idIntervenant;
     private String typePriseEnCompte;
     private String motifRefusOtUrgent;
     private String matricule;
-    private Object datePriseEnCompte;
-    private Object dateEnvoiVersGmao;
-    private Object idCr;
-    private OtEntity otByIdOt;
+    private ZonedDateTime datePriseEnCompte;
+    private ZonedDateTime dateEnvoiVersGmao;
+    private UUID idCr;
+    private OtEntity ot;
 
     @Basic
     @Column(name = "id_intervenant", nullable = false)
-    public Object getIdIntervenant() {
+    public UUID getIdIntervenant() {
         return idIntervenant;
     }
 
-    public void setIdIntervenant(Object idIntervenant) {
+    public void setIdIntervenant(UUID idIntervenant) {
         this.idIntervenant = idIntervenant;
     }
 
@@ -61,31 +60,31 @@ public class OtPriseEnCompteIntervenantEntity extends UuidEntity{
 
     @Basic
     @Column(name = "date_prise_en_compte", nullable = false)
-    public Object getDatePriseEnCompte() {
+    public ZonedDateTime getDatePriseEnCompte() {
         return datePriseEnCompte;
     }
 
-    public void setDatePriseEnCompte(Object datePriseEnCompte) {
+    public void setDatePriseEnCompte(ZonedDateTime datePriseEnCompte) {
         this.datePriseEnCompte = datePriseEnCompte;
     }
 
     @Basic
     @Column(name = "date_envoi_vers_gmao", nullable = true)
-    public Object getDateEnvoiVersGmao() {
+    public ZonedDateTime getDateEnvoiVersGmao() {
         return dateEnvoiVersGmao;
     }
 
-    public void setDateEnvoiVersGmao(Object dateEnvoiVersGmao) {
+    public void setDateEnvoiVersGmao(ZonedDateTime dateEnvoiVersGmao) {
         this.dateEnvoiVersGmao = dateEnvoiVersGmao;
     }
 
     @Basic
     @Column(name = "id_cr", nullable = true)
-    public Object getIdCr() {
+    public UUID getIdCr() {
         return idCr;
     }
 
-    public void setIdCr(Object idCr) {
+    public void setIdCr(UUID idCr) {
         this.idCr = idCr;
     }
 
@@ -111,11 +110,11 @@ public class OtPriseEnCompteIntervenantEntity extends UuidEntity{
 
     @ManyToOne
     @JoinColumn(name = "id_ot", referencedColumnName = "id", nullable = false)
-    public OtEntity getOtByIdOt() {
-        return otByIdOt;
+    public OtEntity getOt() {
+        return ot;
     }
 
-    public void setOtByIdOt(OtEntity otByIdOt) {
-        this.otByIdOt = otByIdOt;
+    public void setOt(OtEntity ot) {
+        this.ot = ot;
     }
 }

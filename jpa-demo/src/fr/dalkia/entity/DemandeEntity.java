@@ -40,7 +40,7 @@ public class DemandeEntity extends UuidEntity {
     private OffsetDateTime dateCreation;
     private Boolean estAstreinte;
     private String natureCas;
-    private DemandeEntity demandeByIdParent;
+    private DemandeEntity demande;
 
     @Basic
     @Column(name = "id_instance_gmao", nullable = true)
@@ -398,11 +398,11 @@ public class DemandeEntity extends UuidEntity {
 
     @ManyToOne
     @JoinColumn(name = "id_parent", referencedColumnName = "id")
-    public DemandeEntity getDemandeByIdParent() {
-        return demandeByIdParent;
+    public DemandeEntity getDemande() {
+        return demande;
     }
 
-    public void setDemandeByIdParent(DemandeEntity demandeByIdParent) {
-        this.demandeByIdParent = demandeByIdParent;
+    public void setDemande(DemandeEntity demande) {
+        this.demande = demande;
     }
 }
